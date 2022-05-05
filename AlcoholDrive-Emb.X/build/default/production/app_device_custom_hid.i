@@ -5006,7 +5006,61 @@ typedef enum
 # 62 "./system.h"
 void SYSTEM_Initialize( SYSTEM_STATE state );
 # 7 "app_device_custom_hid.c" 2
-# 25 "app_device_custom_hid.c"
+
+
+# 1 "./alcohol_drive.h" 1
+
+
+
+
+
+
+
+typedef enum{
+
+    ALCOHOL_OK = 0x81,
+
+    ALCOHOL_NG = 0x82,
+
+    START_SCANNING = 0x80,
+
+    STOP_SCANNING = 0x70
+} ALCOHOL_DRIVE_COMMANDS;
+
+
+void init_alcohol();
+
+
+
+
+
+_Bool check_alcohol();
+# 9 "app_device_custom_hid.c" 2
+
+# 1 "./leds.h" 1
+
+
+
+
+
+typedef enum
+{
+    LED_NONE,
+    LED_CONNECT,
+    LED_SCANNING,
+    LED_OK,
+    LED_NG
+} LED;
+
+
+
+void LED_On(LED led);
+
+void LED_Off(LED led);
+
+void LED_Init();
+# 10 "app_device_custom_hid.c" 2
+# 28 "app_device_custom_hid.c"
         unsigned char ReceivedDataBuffer[64] __attribute__((address(0x2050)));
         unsigned char ToSendDataBuffer[64] __attribute__((address(0x20A0)));
 
@@ -5019,11 +5073,6 @@ volatile void* USBOutHandle;
 volatile void* USBInHandle;
 
 
-typedef enum
-{
-    COMMAND_TOGGLE_LED = 0x80,
-} CUSTOM_HID_DEMO_COMMANDS;
-# 56 "app_device_custom_hid.c"
 void APP_DeviceCustomHIDInitialize()
 {
 
@@ -5036,7 +5085,8 @@ void APP_DeviceCustomHIDInitialize()
 
     USBOutHandle = (volatile void*)USBTransferOnePacket(1,0,(uint8_t*)&ReceivedDataBuffer[0],64);
 }
-# 83 "app_device_custom_hid.c"
+
+
 void APP_DeviceCustomHIDTasks()
 {
 
@@ -5059,22 +5109,37 @@ void APP_DeviceCustomHIDTasks()
 
     if(((USBOutHandle != 0x0000) && ((*(volatile uint8_t*)USBOutHandle & 0x80) != 0x00)) == 0)
     {
-
-
-
         switch(ReceivedDataBuffer[0])
         {
-            case COMMAND_TOGGLE_LED:
-
+            case START_SCANNING:
                 if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
                 {
-                    LATA ^= 0x20;
-                    ToSendDataBuffer[0] = 0x81;
-                    ToSendDataBuffer[1] = 0x01;
+                    LED_On(LED_SCANNING);
+                    _Bool result = check_alcohol();
+
+                    if(result){
+                        ToSendDataBuffer[0] = ALCOHOL_OK;
+                        LED_On(LED_OK);
+                    }else{
+                        ToSendDataBuffer[0] = ALCOHOL_NG;
+                        LED_On(LED_NG);
+                    }
+
+
                     USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
+                    LED_Off(LED_SCANNING);
+                }
+                break;
+            case STOP_SCANNING:
+                if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
+                {
+                    LED_Off(LED_NG);
+                    LED_Off(LED_OK);
                 }
                 break;
         }
+
+
 
 
         USBOutHandle = USBTransferOnePacket(1,0,(uint8_t*)&ReceivedDataBuffer[0],64);

@@ -4954,6 +4954,59 @@ _Bool USBHALInitialize ( unsigned long flags );
 # 51 "./usb.h" 2
 # 22 "system.c" 2
 
+# 1 "./leds.h" 1
+
+
+
+
+
+typedef enum
+{
+    LED_NONE,
+    LED_CONNECT,
+    LED_SCANNING,
+    LED_OK,
+    LED_NG
+} LED;
+
+
+
+void LED_On(LED led);
+
+void LED_Off(LED led);
+
+void LED_Init();
+# 23 "system.c" 2
+
+# 1 "./alcohol_drive.h" 1
+
+
+
+
+
+
+
+typedef enum{
+
+    ALCOHOL_OK = 0x81,
+
+    ALCOHOL_NG = 0x82,
+
+    START_SCANNING = 0x80,
+
+    STOP_SCANNING = 0x70
+} ALCOHOL_DRIVE_COMMANDS;
+
+
+void init_alcohol();
+
+
+
+
+
+_Bool check_alcohol();
+# 24 "system.c" 2
+
 
 
 
@@ -4979,7 +5032,7 @@ _Bool USBHALInitialize ( unsigned long flags );
 #pragma config BORV = LO
 #pragma config LPBOR = OFF
 #pragma config LVP = OFF
-# 83 "system.c"
+# 85 "system.c"
 void SYSTEM_Initialize( SYSTEM_STATE state )
 {
     switch(state)
@@ -4991,9 +5044,16 @@ void SYSTEM_Initialize( SYSTEM_STATE state )
                 OSCCON = 0xFC;
                 ACTCON = 0x90;
 
+            ANSELA = 0x00;
+            ANSELC = 0x00;
+
+            LED_Init();
+
+            init_alcohol();
             break;
 
         case SYSTEM_STATE_USB_SUSPEND:
+            LED_Off(LED_CONNECT);
             break;
 
         case SYSTEM_STATE_USB_RESUME:

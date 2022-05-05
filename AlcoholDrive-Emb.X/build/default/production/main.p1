@@ -13,12 +13,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "639
 [; ;./usb_device.h: 639: void USBDeviceAttach(void);
 [v _USBDeviceAttach `(v ~T0 @X0 0 ef ]
-"2519 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h
-[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 2519: extern volatile unsigned char ANSELA __attribute__((address(0x18C)));
-[v _ANSELA `Vuc ~T0 @X0 0 e@396 ]
-"1004
-[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1004: extern volatile unsigned char TRISA __attribute__((address(0x08C)));
-[v _TRISA `Vuc ~T0 @X0 0 e@140 ]
 "64 ./app_device_custom_hid.h
 [; ;./app_device_custom_hid.h: 64: void APP_DeviceCustomHIDTasks(void);
 [v _APP_DeviceCustomHIDTasks `(v ~T0 @X0 0 ef ]
@@ -473,27 +467,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 35:     USBDeviceAttach();
 [e ( _USBDeviceAttach ..  ]
 "37
-[; ;main.c: 37:     ANSELA = 0x00;
-[e = _ANSELA -> -> 0 `i `uc ]
-"38
-[; ;main.c: 38:     TRISA = 0x00;
-[e = _TRISA -> -> 0 `i `uc ]
-"40
-[; ;main.c: 40:     while(1)
+[; ;main.c: 37:     while(1)
 [e :U 385 ]
-"41
-[; ;main.c: 41:     {
+"38
+[; ;main.c: 38:     {
 {
-"61
-[; ;main.c: 61:         APP_DeviceCustomHIDTasks();
+"58
+[; ;main.c: 58:         APP_DeviceCustomHIDTasks();
 [e ( _APP_DeviceCustomHIDTasks ..  ]
-"63
-[; ;main.c: 63:     }
+"60
+[; ;main.c: 60:     }
 }
 [e :U 384 ]
 [e $U 385  ]
 [e :U 386 ]
-"64
-[; ;main.c: 64: }
+"61
+[; ;main.c: 61: }
 [e :UE 383 ]
 }

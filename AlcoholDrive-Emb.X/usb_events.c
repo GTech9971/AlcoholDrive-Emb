@@ -24,6 +24,7 @@ please contact mla_licensing@microchip.com
 #include "usb_device_hid.h"
 
 #include "app_device_custom_hid.h"
+#include "leds.h"
 
 
 /*******************************************************************
@@ -71,6 +72,7 @@ bool USER_USB_CALLBACK_EVENT_HANDLER(USB_EVENT event, void *pdata, uint16_t size
             //no further processing is needed for purely self powered applications that
             //don't consume power from the host.
             SYSTEM_Initialize(SYSTEM_STATE_USB_SUSPEND);
+            LED_Off(LED_CONNECT);
             break;
 
         case EVENT_RESUME:
@@ -88,6 +90,7 @@ bool USER_USB_CALLBACK_EVENT_HANDLER(USB_EVENT event, void *pdata, uint16_t size
             /* When the device is configured, we can (re)initialize the demo
              * code. */
             APP_DeviceCustomHIDInitialize();
+            LED_On(LED_CONNECT);
             break;
 
         case EVENT_SET_DESCRIPTOR:

@@ -6,6 +6,9 @@
 
 #include "system.h"
 
+#include "alcohol_drive.h"
+#include "leds.h"
+
 
 /** VARIABLES ******************************************************/
 /* Some processors have a limited range of RAM addresses where the USB module
@@ -33,26 +36,7 @@
 volatile USB_HANDLE USBOutHandle;    
 volatile USB_HANDLE USBInHandle;
 
-/** DEFINITIONS ****************************************************/
-typedef enum
-{
-    COMMAND_TOGGLE_LED = 0x80,
-} CUSTOM_HID_DEMO_COMMANDS;
 
-/** FUNCTIONS ******************************************************/
-
-/*********************************************************************
-* Function: void APP_DeviceCustomHIDInitialize(void);
-*
-* Overview: Initializes the Custom HID demo code
-*
-* PreCondition: None
-*
-* Input: None
-*
-* Output: None
-*
-********************************************************************/
 void APP_DeviceCustomHIDInitialize()
 {
     //initialize the variable holding the handle for the last
@@ -66,20 +50,7 @@ void APP_DeviceCustomHIDInitialize()
     USBOutHandle = (volatile USB_HANDLE)HIDRxPacket(CUSTOM_DEVICE_HID_EP,(uint8_t*)&ReceivedDataBuffer[0],64);
 }
 
-/*********************************************************************
-* Function: void APP_DeviceCustomHIDTasks(void);
-*
-* Overview: Keeps the Custom HID demo running.
-*
-* PreCondition: The demo should have been initialized and started via
-*   the APP_DeviceCustomHIDInitialize() and APP_DeviceCustomHIDStart() demos
-*   respectively.
-*
-* Input: None
-*
-* Output: None
-*
-********************************************************************/
+
 void APP_DeviceCustomHIDTasks()
 {   
     /* If the USB device isn't configured yet, we can't really do anything
@@ -102,22 +73,37 @@ void APP_DeviceCustomHIDTasks()
     //Check if we have received an OUT data packet from the host
     if(HIDRxHandleBusy(USBOutHandle) == false)
     {   
-        //We just received a packet of data from the USB host.
-        //Check the first uint8_t of the packet to see what command the host
-        //application software wants us to fulfill.
-        switch(ReceivedDataBuffer[0])				//Look at the data the host sent, to see what kind of application specific command it sent.
+        switch(ReceivedDataBuffer[0])
         {
-            case COMMAND_TOGGLE_LED:  //Toggle LEDs command
-                //Check to make sure the endpoint/buffer is free before we modify the contents
+            case START_SCANNING:  //スキャン開始
+                if(!HIDTxHandleBusy(USBInHandle))
+                {    
+                    LED_On(LED_SCANNING);
+                    bool result = check_alcohol();
+                    //アルコール未検知
+                    if(result){
+                        ToSendDataBuffer[0] = ALCOHOL_OK;
+                        LED_On(LED_OK);
+                    }else{ //1アルコール検知
+                        ToSendDataBuffer[0] = ALCOHOL_NG;
+                        LED_On(LED_NG);
+                    }
+                    
+                    //結果送信
+                    USBInHandle = HIDTxPacket(CUSTOM_DEVICE_HID_EP, (uint8_t*)&ToSendDataBuffer[0],64);
+                    LED_Off(LED_SCANNING);
+                }
+                break;
+            case STOP_SCANNING://スキャン停止
                 if(!HIDTxHandleBusy(USBInHandle))
                 {
-                    LATA ^= 0x20;
-                    ToSendDataBuffer[0] = 0x81;				//Echo back to the host PC the command we are fulfilling in the first uint8_t.  In this case, the Get Pushbutton State command.
-                    ToSendDataBuffer[1] = 0x01;
-                    USBInHandle = HIDTxPacket(CUSTOM_DEVICE_HID_EP, (uint8_t*)&ToSendDataBuffer[0],64);
+                    LED_Off(LED_NG);
+                    LED_Off(LED_OK);
                 }
                 break;
         }
+        
+        
         //Re-arm the OUT endpoint, so we can receive the next OUT data packet 
         //that the host may try to send us.
         USBOutHandle = HIDRxPacket(CUSTOM_DEVICE_HID_EP, (uint8_t*)&ReceivedDataBuffer[0], 64);

@@ -1,23 +1,33 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"50 usb_events.c
-[; ;usb_events.c: 50: _Bool USER_USB_CALLBACK_EVENT_HANDLER(USB_EVENT event, void *pdata, uint16_t size)
+"51 usb_events.c
+[; ;usb_events.c: 51: _Bool USER_USB_CALLBACK_EVENT_HANDLER(USB_EVENT event, void *pdata, uint16_t size)
 [c E2550 0 1 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 400 500 600 700 800 900 1000 10000 32767 .. ]
 [n E2550 . EVENT_NONE EVENT_DEVICE_STACK_BASE EVENT_HOST_STACK_BASE EVENT_HUB_ATTACH EVENT_STALL EVENT_VBUS_SES_REQUEST EVENT_VBUS_OVERCURRENT EVENT_VBUS_REQUEST_POWER EVENT_VBUS_RELEASE_POWER EVENT_VBUS_POWER_AVAILABLE EVENT_UNSUPPORTED_DEVICE EVENT_CANNOT_ENUMERATE EVENT_CLIENT_INIT_ERROR EVENT_OUT_OF_MEMORY EVENT_UNSPECIFIED_ERROR EVENT_DETACH EVENT_TRANSFER EVENT_SOF EVENT_RESUME EVENT_SUSPEND EVENT_RESET EVENT_DATA_ISOC_READ EVENT_DATA_ISOC_WRITE EVENT_OVERRIDE_CLIENT_DRIVER_SELECTION EVENT_1MS EVENT_ALT_INTERFACE EVENT_HOLD_BEFORE_CONFIGURATION EVENT_GENERIC_BASE EVENT_MSD_BASE EVENT_HID_BASE EVENT_PRINTER_BASE EVENT_CDC_BASE EVENT_CHARGER_BASE EVENT_AUDIO_BASE EVENT_USER_BASE EVENT_BUS_ERROR  ]
-"73
-[; ;usb_events.c: 73:             SYSTEM_Initialize(SYSTEM_STATE_USB_SUSPEND);
+"74
+[; ;usb_events.c: 74:             SYSTEM_Initialize(SYSTEM_STATE_USB_SUSPEND);
 [c E2309 0 1 2 .. ]
 [n E2309 . SYSTEM_STATE_USB_START SYSTEM_STATE_USB_SUSPEND SYSTEM_STATE_USB_RESUME  ]
 "62 ./system.h
 [; ;./system.h: 62: void SYSTEM_Initialize( SYSTEM_STATE state );
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef1`E2309 ]
+"75 usb_events.c
+[; ;usb_events.c: 75:             LED_Off(LED_CONNECT);
+[c E3022 0 1 2 3 4 .. ]
+[n E3022 . LED_NONE LED_CONNECT LED_SCANNING LED_OK LED_NG  ]
+"19 ./leds.h
+[; ;./leds.h: 19: void LED_Off(LED led);
+[v _LED_Off `(v ~T0 @X0 0 ef1`E3022 ]
 "32 ./app_device_custom_hid.h
 [; ;./app_device_custom_hid.h: 32: void APP_DeviceCustomHIDInitialize(void);
 [v _APP_DeviceCustomHIDInitialize `(v ~T0 @X0 0 ef ]
+"17 ./leds.h
+[; ;./leds.h: 17: void LED_On(LED led);
+[v _LED_On `(v ~T0 @X0 0 ef1`E3022 ]
 "98 ./usb_device_hid.h
 [; ;./usb_device_hid.h: 98: void USBCheckHIDRequest(void);
 [v _USBCheckHIDRequest `(v ~T0 @X0 0 ef ]
-"110 usb_events.c
-[; ;usb_events.c: 110:     }
+"113 usb_events.c
+[; ;usb_events.c: 113:     }
 [c E2618 1 2 3 4 5 .. ]
 [n E2618 . EVENT_CONFIGURED EVENT_SET_DESCRIPTOR EVENT_EP0_REQUEST EVENT_ATTACH EVENT_TRANSFER_TERMINATED  ]
 "54 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h
@@ -452,101 +462,107 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6106
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 6106: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"50 usb_events.c
-[; ;usb_events.c: 50: _Bool USER_USB_CALLBACK_EVENT_HANDLER(USB_EVENT event, void *pdata, uint16_t size)
+"51 usb_events.c
+[; ;usb_events.c: 51: _Bool USER_USB_CALLBACK_EVENT_HANDLER(USB_EVENT event, void *pdata, uint16_t size)
 [v _USER_USB_CALLBACK_EVENT_HANDLER `(a ~T0 @X0 1 ef3`E2550`*v`us ]
-"51
-[; ;usb_events.c: 51: {
+"52
+[; ;usb_events.c: 52: {
 {
 [e :U _USER_USB_CALLBACK_EVENT_HANDLER ]
-"50
-[; ;usb_events.c: 50: _Bool USER_USB_CALLBACK_EVENT_HANDLER(USB_EVENT event, void *pdata, uint16_t size)
+"51
+[; ;usb_events.c: 51: _Bool USER_USB_CALLBACK_EVENT_HANDLER(USB_EVENT event, void *pdata, uint16_t size)
 [v _event `E2550 ~T0 @X0 1 r1 ]
 [v _pdata `*v ~T0 @X0 1 r2 ]
 [v _size `us ~T0 @X0 1 r3 ]
-"51
-[; ;usb_events.c: 51: {
-[f ]
 "52
-[; ;usb_events.c: 52:     switch((int)event)
-[e $U 385  ]
+[; ;usb_events.c: 52: {
+[f ]
 "53
-[; ;usb_events.c: 53:     {
-{
+[; ;usb_events.c: 53:     switch((int)event)
+[e $U 385  ]
 "54
-[; ;usb_events.c: 54:         case EVENT_TRANSFER:
-[e :U 386 ]
+[; ;usb_events.c: 54:     {
+{
 "55
-[; ;usb_events.c: 55:             break;
+[; ;usb_events.c: 55:         case EVENT_TRANSFER:
+[e :U 386 ]
+"56
+[; ;usb_events.c: 56:             break;
 [e $U 384  ]
-"57
-[; ;usb_events.c: 57:         case EVENT_SOF:
+"58
+[; ;usb_events.c: 58:         case EVENT_SOF:
 [e :U 387 ]
-"61
-[; ;usb_events.c: 61:             break;
+"62
+[; ;usb_events.c: 62:             break;
 [e $U 384  ]
-"63
-[; ;usb_events.c: 63:         case EVENT_SUSPEND:
+"64
+[; ;usb_events.c: 64:         case EVENT_SUSPEND:
 [e :U 388 ]
-"73
-[; ;usb_events.c: 73:             SYSTEM_Initialize(SYSTEM_STATE_USB_SUSPEND);
-[e ( _SYSTEM_Initialize (1 . `E2309 1 ]
 "74
-[; ;usb_events.c: 74:             break;
-[e $U 384  ]
+[; ;usb_events.c: 74:             SYSTEM_Initialize(SYSTEM_STATE_USB_SUSPEND);
+[e ( _SYSTEM_Initialize (1 . `E2309 1 ]
+"75
+[; ;usb_events.c: 75:             LED_Off(LED_CONNECT);
+[e ( _LED_Off (1 . `E3022 1 ]
 "76
-[; ;usb_events.c: 76:         case EVENT_RESUME:
+[; ;usb_events.c: 76:             break;
+[e $U 384  ]
+"78
+[; ;usb_events.c: 78:         case EVENT_RESUME:
 [e :U 389 ]
-"84
-[; ;usb_events.c: 84:             SYSTEM_Initialize(SYSTEM_STATE_USB_RESUME);
+"86
+[; ;usb_events.c: 86:             SYSTEM_Initialize(SYSTEM_STATE_USB_RESUME);
 [e ( _SYSTEM_Initialize (1 . `E2309 2 ]
-"85
-[; ;usb_events.c: 85:             break;
-[e $U 384  ]
 "87
-[; ;usb_events.c: 87:         case EVENT_CONFIGURED:
-[e :U 390 ]
-"90
-[; ;usb_events.c: 90:             APP_DeviceCustomHIDInitialize();
-[e ( _APP_DeviceCustomHIDInitialize ..  ]
-"91
-[; ;usb_events.c: 91:             break;
+[; ;usb_events.c: 87:             break;
 [e $U 384  ]
+"89
+[; ;usb_events.c: 89:         case EVENT_CONFIGURED:
+[e :U 390 ]
+"92
+[; ;usb_events.c: 92:             APP_DeviceCustomHIDInitialize();
+[e ( _APP_DeviceCustomHIDInitialize ..  ]
 "93
-[; ;usb_events.c: 93:         case EVENT_SET_DESCRIPTOR:
-[e :U 391 ]
+[; ;usb_events.c: 93:             LED_On(LED_CONNECT);
+[e ( _LED_On (1 . `E3022 1 ]
 "94
 [; ;usb_events.c: 94:             break;
 [e $U 384  ]
 "96
-[; ;usb_events.c: 96:         case EVENT_EP0_REQUEST:
-[e :U 392 ]
-"99
-[; ;usb_events.c: 99:             USBCheckHIDRequest();
-[e ( _USBCheckHIDRequest ..  ]
-"100
-[; ;usb_events.c: 100:             break;
+[; ;usb_events.c: 96:         case EVENT_SET_DESCRIPTOR:
+[e :U 391 ]
+"97
+[; ;usb_events.c: 97:             break;
 [e $U 384  ]
+"99
+[; ;usb_events.c: 99:         case EVENT_EP0_REQUEST:
+[e :U 392 ]
 "102
-[; ;usb_events.c: 102:         case EVENT_BUS_ERROR:
-[e :U 393 ]
+[; ;usb_events.c: 102:             USBCheckHIDRequest();
+[e ( _USBCheckHIDRequest ..  ]
 "103
 [; ;usb_events.c: 103:             break;
 [e $U 384  ]
 "105
-[; ;usb_events.c: 105:         case EVENT_TRANSFER_TERMINATED:
-[e :U 394 ]
+[; ;usb_events.c: 105:         case EVENT_BUS_ERROR:
+[e :U 393 ]
 "106
 [; ;usb_events.c: 106:             break;
 [e $U 384  ]
 "108
-[; ;usb_events.c: 108:         default:
-[e :U 395 ]
+[; ;usb_events.c: 108:         case EVENT_TRANSFER_TERMINATED:
+[e :U 394 ]
 "109
 [; ;usb_events.c: 109:             break;
 [e $U 384  ]
-"110
-[; ;usb_events.c: 110:     }
+"111
+[; ;usb_events.c: 111:         default:
+[e :U 395 ]
+"112
+[; ;usb_events.c: 112:             break;
+[e $U 384  ]
+"113
+[; ;usb_events.c: 113:     }
 }
 [e $U 384  ]
 [e :U 385 ]
@@ -561,11 +577,11 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ . `E2618 4 394
  395 ]
 [e :U 384 ]
-"111
-[; ;usb_events.c: 111:     return 1;
+"114
+[; ;usb_events.c: 114:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 383  ]
-"112
-[; ;usb_events.c: 112: }
+"115
+[; ;usb_events.c: 115: }
 [e :UE 383 ]
 }

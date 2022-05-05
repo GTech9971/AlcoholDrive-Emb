@@ -16,6 +16,8 @@
       <itemPath>usb_device_local.h</itemPath>
       <itemPath>usb_hal.h</itemPath>
       <itemPath>usb_hal_pic16f1.h</itemPath>
+      <itemPath>leds.h</itemPath>
+      <itemPath>alcohol_drive.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -31,6 +33,8 @@
       <itemPath>usb_device.c</itemPath>
       <itemPath>usb_device_hid.c</itemPath>
       <itemPath>usb_events.c</itemPath>
+      <itemPath>leds.c</itemPath>
+      <itemPath>alcohol_drive.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

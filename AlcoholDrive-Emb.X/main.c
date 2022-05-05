@@ -33,9 +33,6 @@ MAIN_RETURN main(void)
 
     USBDeviceInit();
     USBDeviceAttach();
-    
-    ANSELA = 0x00;
-    TRISA  = 0x00;
 
     while(1)
     {

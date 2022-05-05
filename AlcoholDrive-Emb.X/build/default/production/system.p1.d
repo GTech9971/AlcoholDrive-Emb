@@ -8,4 +8,6 @@ usb_ch9.h  \
 usb_common.h  \
 usb_device.h  \
 usb_hal.h  \
-usb_hal_pic16f1.h 
+usb_hal_pic16f1.h  \
+leds.h  \
+alcohol_drive.h 

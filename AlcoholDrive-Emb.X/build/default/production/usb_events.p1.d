@@ -10,4 +10,5 @@ usb_device.h  \
 usb_hal.h  \
 usb_hal_pic16f1.h  \
 usb_device_hid.h  \
-app_device_custom_hid.h 
+app_device_custom_hid.h  \
+leds.h 

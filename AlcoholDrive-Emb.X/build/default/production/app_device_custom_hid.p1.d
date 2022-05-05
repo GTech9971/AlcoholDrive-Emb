@@ -9,4 +9,6 @@ usb_hal.h  \
 usb_hal_pic16f1.h  \
 fixed_address_memory.h  \
 usb_device_hid.h  \
-system.h 
+system.h  \
+alcohol_drive.h  \
+leds.h 

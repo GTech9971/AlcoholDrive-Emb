@@ -5,8 +5,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "448
 [; ;./usb_device.h: 448: void* USBTransferOnePacket(uint8_t ep,uint8_t dir,uint8_t* data,uint8_t len);
 [v _USBTransferOnePacket `(*v ~T0 @X0 0 ef4`uc`uc`*uc`uc ]
-"88 app_device_custom_hid.c
-[; ;app_device_custom_hid.c: 88:     if( USBDeviceState < CONFIGURED_STATE )
+"59 app_device_custom_hid.c
+[; ;app_device_custom_hid.c: 59:     if( USBDeviceState < CONFIGURED_STATE )
 [c E297 0 1 2 4 8 16 32 .. ]
 [n E297 . DETACHED_STATE ATTACHED_STATE POWERED_STATE DEFAULT_STATE ADR_PENDING_STATE ADDRESS_STATE CONFIGURED_STATE  ]
 "2050 ./usb_device.h
@@ -23,13 +23,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 "5020
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 5020: extern volatile UCONbits_t UCONbits __attribute__((address(0xE8E)));
 [v _UCONbits `VS309 ~T0 @X0 0 e@3726 ]
-"1866
-[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1866: extern volatile unsigned char LATA __attribute__((address(0x10C)));
-[v _LATA `Vuc ~T0 @X0 0 e@268 ]
-"120 app_device_custom_hid.c
-[; ;app_device_custom_hid.c: 120:         }
-[c E3023 128 .. ]
-[n E3023 . COMMAND_TOGGLE_LED  ]
+"81 app_device_custom_hid.c
+[; ;app_device_custom_hid.c: 81:                     LED_On(LED_SCANNING);
+[c E3027 0 1 2 3 4 .. ]
+[n E3027 . LED_NONE LED_CONNECT LED_SCANNING LED_OK LED_NG  ]
+"17 ./leds.h
+[; ;./leds.h: 17: void LED_On(LED led);
+[v _LED_On `(v ~T0 @X0 0 ef1`E3027 ]
+"26 ./alcohol_drive.h
+[; ;./alcohol_drive.h: 26: _Bool check_alcohol();
+[v _check_alcohol `(a ~T0 @X0 0 e? ]
+"85 app_device_custom_hid.c
+[; ;app_device_custom_hid.c: 85:                         ToSendDataBuffer[0] = ALCOHOL_OK;
+[c E3019 129 130 128 112 .. ]
+[n E3019 . ALCOHOL_OK ALCOHOL_NG START_SCANNING STOP_SCANNING  ]
+"19 ./leds.h
+[; ;./leds.h: 19: void LED_Off(LED led);
+[v _LED_Off `(v ~T0 @X0 0 ef1`E3027 ]
 "54 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -462,129 +472,179 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6106
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 6106: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"25 app_device_custom_hid.c
-[; ;app_device_custom_hid.c: 25:         unsigned char ReceivedDataBuffer[64] __attribute__((address(0x2050)));
+"28 app_device_custom_hid.c
+[; ;app_device_custom_hid.c: 28:         unsigned char ReceivedDataBuffer[64] __attribute__((address(0x2050)));
 [v _ReceivedDataBuffer `uc ~T0 @X0 -> 64 `i e@8272 ]
-"26
-[; ;app_device_custom_hid.c: 26:         unsigned char ToSendDataBuffer[64] __attribute__((address(0x20A0)));
+"29
+[; ;app_device_custom_hid.c: 29:         unsigned char ToSendDataBuffer[64] __attribute__((address(0x20A0)));
 [v _ToSendDataBuffer `uc ~T0 @X0 -> 64 `i e@8352 ]
-"33
-[; ;app_device_custom_hid.c: 33: volatile void* USBOutHandle;
+"36
+[; ;app_device_custom_hid.c: 36: volatile void* USBOutHandle;
 [v _USBOutHandle `*Vv ~T0 @X0 1 e ]
-"34
-[; ;app_device_custom_hid.c: 34: volatile void* USBInHandle;
+"37
+[; ;app_device_custom_hid.c: 37: volatile void* USBInHandle;
 [v _USBInHandle `*Vv ~T0 @X0 1 e ]
-"56
-[; ;app_device_custom_hid.c: 56: void APP_DeviceCustomHIDInitialize()
+"40
+[; ;app_device_custom_hid.c: 40: void APP_DeviceCustomHIDInitialize()
 [v _APP_DeviceCustomHIDInitialize `(v ~T0 @X0 1 ef ]
-"57
-[; ;app_device_custom_hid.c: 57: {
+"41
+[; ;app_device_custom_hid.c: 41: {
 {
 [e :U _APP_DeviceCustomHIDInitialize ]
 [f ]
-"60
-[; ;app_device_custom_hid.c: 60:     USBInHandle = 0;
+"44
+[; ;app_device_custom_hid.c: 44:     USBInHandle = 0;
 [e = _USBInHandle -> -> 0 `i `*Vv ]
-"63
-[; ;app_device_custom_hid.c: 63:     USBEnableEndpoint(1, 0x02|0x04|0x10|0x08);
+"47
+[; ;app_device_custom_hid.c: 47:     USBEnableEndpoint(1, 0x02|0x04|0x10|0x08);
 [e ( _USBEnableEndpoint (2 , -> -> 1 `i `uc -> | | | -> 2 `i -> 4 `i -> 16 `i -> 8 `i `uc ]
-"66
-[; ;app_device_custom_hid.c: 66:     USBOutHandle = (volatile void*)USBTransferOnePacket(1,0,(uint8_t*)&ReceivedDataBuffer[0],64);
+"50
+[; ;app_device_custom_hid.c: 50:     USBOutHandle = (volatile void*)USBTransferOnePacket(1,0,(uint8_t*)&ReceivedDataBuffer[0],64);
 [e = _USBOutHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc &U *U + &U _ReceivedDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux -> -> 64 `i `uc `*Vv ]
-"67
-[; ;app_device_custom_hid.c: 67: }
+"51
+[; ;app_device_custom_hid.c: 51: }
 [e :UE 383 ]
 }
-"83
-[; ;app_device_custom_hid.c: 83: void APP_DeviceCustomHIDTasks()
+"54
+[; ;app_device_custom_hid.c: 54: void APP_DeviceCustomHIDTasks()
 [v _APP_DeviceCustomHIDTasks `(v ~T0 @X0 1 ef ]
-"84
-[; ;app_device_custom_hid.c: 84: {
+"55
+[; ;app_device_custom_hid.c: 55: {
 {
 [e :U _APP_DeviceCustomHIDTasks ]
 [f ]
-"88
-[; ;app_device_custom_hid.c: 88:     if( USBDeviceState < CONFIGURED_STATE )
+"59
+[; ;app_device_custom_hid.c: 59:     if( USBDeviceState < CONFIGURED_STATE )
 [e $ ! < -> _USBDeviceState `ui -> . `E297 6 `ui 385  ]
-"89
-[; ;app_device_custom_hid.c: 89:     {
+"60
+[; ;app_device_custom_hid.c: 60:     {
 {
-"90
-[; ;app_device_custom_hid.c: 90:         return;
+"61
+[; ;app_device_custom_hid.c: 61:         return;
 [e $UE 384  ]
-"91
-[; ;app_device_custom_hid.c: 91:     }
+"62
+[; ;app_device_custom_hid.c: 62:     }
 }
 [e :U 385 ]
-"97
-[; ;app_device_custom_hid.c: 97:     if( UCONbits.SUSPND== 1 )
+"68
+[; ;app_device_custom_hid.c: 68:     if( UCONbits.SUSPND== 1 )
 [e $ ! == -> . . _UCONbits 0 1 `i -> 1 `i 386  ]
-"98
-[; ;app_device_custom_hid.c: 98:     {
+"69
+[; ;app_device_custom_hid.c: 69:     {
 {
-"99
-[; ;app_device_custom_hid.c: 99:         return;
+"70
+[; ;app_device_custom_hid.c: 70:         return;
 [e $UE 384  ]
-"100
-[; ;app_device_custom_hid.c: 100:     }
+"71
+[; ;app_device_custom_hid.c: 71:     }
 }
 [e :U 386 ]
-"103
-[; ;app_device_custom_hid.c: 103:     if(((USBOutHandle != 0x0000) && ((*(volatile uint8_t*)USBOutHandle & 0x80) != 0x00)) == 0)
+"74
+[; ;app_device_custom_hid.c: 74:     if(((USBOutHandle != 0x0000) && ((*(volatile uint8_t*)USBOutHandle & 0x80) != 0x00)) == 0)
 [e $ ! == -> && != _USBOutHandle -> -> 0 `i `*Vv != & -> *U -> _USBOutHandle `*Vuc `i -> 128 `i -> 0 `i `i -> 0 `i 387  ]
-"104
-[; ;app_device_custom_hid.c: 104:     {
+"75
+[; ;app_device_custom_hid.c: 75:     {
 {
-"108
-[; ;app_device_custom_hid.c: 108:         switch(ReceivedDataBuffer[0])
+"76
+[; ;app_device_custom_hid.c: 76:         switch(ReceivedDataBuffer[0])
 [e $U 389  ]
-"109
-[; ;app_device_custom_hid.c: 109:         {
+"77
+[; ;app_device_custom_hid.c: 77:         {
 {
-"110
-[; ;app_device_custom_hid.c: 110:             case COMMAND_TOGGLE_LED:
+"78
+[; ;app_device_custom_hid.c: 78:             case START_SCANNING:
 [e :U 390 ]
-"112
-[; ;app_device_custom_hid.c: 112:                 if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
+"79
+[; ;app_device_custom_hid.c: 79:                 if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
 [e $ ! ! && != _USBInHandle -> -> 0 `i `*Vv != & -> *U -> _USBInHandle `*Vuc `i -> 128 `i -> 0 `i 391  ]
-"113
-[; ;app_device_custom_hid.c: 113:                 {
+"80
+[; ;app_device_custom_hid.c: 80:                 {
 {
-"114
-[; ;app_device_custom_hid.c: 114:                     LATA ^= 0x20;
-[e =^ _LATA -> -> 32 `i `Vuc ]
-"115
-[; ;app_device_custom_hid.c: 115:                     ToSendDataBuffer[0] = 0x81;
-[e = *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 129 `i `uc ]
-"116
-[; ;app_device_custom_hid.c: 116:                     ToSendDataBuffer[1] = 0x01;
-[e = *U + &U _ToSendDataBuffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 1 `i `uc ]
-"117
-[; ;app_device_custom_hid.c: 117:                     USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
+"81
+[; ;app_device_custom_hid.c: 81:                     LED_On(LED_SCANNING);
+[e ( _LED_On (1 . `E3027 2 ]
+"82
+[; ;app_device_custom_hid.c: 82:                     _Bool result = check_alcohol();
+[v _result `a ~T0 @X0 1 a ]
+[e = _result ( _check_alcohol ..  ]
+"84
+[; ;app_device_custom_hid.c: 84:                     if(result){
+[e $ ! != -> _result `i -> 0 `i 392  ]
+{
+"85
+[; ;app_device_custom_hid.c: 85:                         ToSendDataBuffer[0] = ALCOHOL_OK;
+[e = *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> . `E3019 0 `uc ]
+"86
+[; ;app_device_custom_hid.c: 86:                         LED_On(LED_OK);
+[e ( _LED_On (1 . `E3027 3 ]
+"87
+[; ;app_device_custom_hid.c: 87:                     }else{
+}
+[e $U 393  ]
+[e :U 392 ]
+{
+"88
+[; ;app_device_custom_hid.c: 88:                         ToSendDataBuffer[0] = ALCOHOL_NG;
+[e = *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> . `E3019 1 `uc ]
+"89
+[; ;app_device_custom_hid.c: 89:                         LED_On(LED_NG);
+[e ( _LED_On (1 . `E3027 4 ]
+"90
+[; ;app_device_custom_hid.c: 90:                     }
+}
+[e :U 393 ]
+"93
+[; ;app_device_custom_hid.c: 93:                     USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
 [e = _USBInHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 1 `i `uc &U *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 64 `i `uc `*Vv ]
-"118
-[; ;app_device_custom_hid.c: 118:                 }
+"94
+[; ;app_device_custom_hid.c: 94:                     LED_Off(LED_SCANNING);
+[e ( _LED_Off (1 . `E3027 2 ]
+"95
+[; ;app_device_custom_hid.c: 95:                 }
 }
 [e :U 391 ]
-"119
-[; ;app_device_custom_hid.c: 119:                 break;
+"96
+[; ;app_device_custom_hid.c: 96:                 break;
 [e $U 388  ]
-"120
-[; ;app_device_custom_hid.c: 120:         }
+"97
+[; ;app_device_custom_hid.c: 97:             case STOP_SCANNING:
+[e :U 394 ]
+"98
+[; ;app_device_custom_hid.c: 98:                 if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
+[e $ ! ! && != _USBInHandle -> -> 0 `i `*Vv != & -> *U -> _USBInHandle `*Vuc `i -> 128 `i -> 0 `i 395  ]
+"99
+[; ;app_device_custom_hid.c: 99:                 {
+{
+"100
+[; ;app_device_custom_hid.c: 100:                     LED_Off(LED_NG);
+[e ( _LED_Off (1 . `E3027 4 ]
+"101
+[; ;app_device_custom_hid.c: 101:                     LED_Off(LED_OK);
+[e ( _LED_Off (1 . `E3027 3 ]
+"102
+[; ;app_device_custom_hid.c: 102:                 }
+}
+[e :U 395 ]
+"103
+[; ;app_device_custom_hid.c: 103:                 break;
+[e $U 388  ]
+"104
+[; ;app_device_custom_hid.c: 104:         }
 }
 [e $U 388  ]
 [e :U 389 ]
-[e [\ -> *U + &U _ReceivedDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux `i , $ . `E3023 0 390
+[e [\ -> *U + &U _ReceivedDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux `i , $ . `E3019 2 390
+ , $ . `E3019 3 394
  388 ]
 [e :U 388 ]
-"123
-[; ;app_device_custom_hid.c: 123:         USBOutHandle = USBTransferOnePacket(1,0,(uint8_t*)&ReceivedDataBuffer[0],64);
+"109
+[; ;app_device_custom_hid.c: 109:         USBOutHandle = USBTransferOnePacket(1,0,(uint8_t*)&ReceivedDataBuffer[0],64);
 [e = _USBOutHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc &U *U + &U _ReceivedDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux -> -> 64 `i `uc `*Vv ]
-"124
-[; ;app_device_custom_hid.c: 124:     }
+"110
+[; ;app_device_custom_hid.c: 110:     }
 }
 [e :U 387 ]
-"125
-[; ;app_device_custom_hid.c: 125: }
+"111
+[; ;app_device_custom_hid.c: 111: }
 [e :UE 384 ]
 }

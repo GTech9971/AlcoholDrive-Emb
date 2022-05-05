@@ -1,38 +1,26 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"85 system.c
-[; ;system.c: 85: void SYSTEM_Initialize( SYSTEM_STATE state )
-[c E2309 0 1 2 .. ]
-[n E2309 . SYSTEM_STATE_USB_START SYSTEM_STATE_USB_SUSPEND SYSTEM_STATE_USB_RESUME  ]
-"1504 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h
-[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1504: extern volatile unsigned char OSCCON __attribute__((address(0x099)));
-[v _OSCCON `Vuc ~T0 @X0 0 e@153 ]
-"4301
-[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 4301: extern volatile unsigned char ACTCON __attribute__((address(0x39B)));
-[v _ACTCON `Vuc ~T0 @X0 0 e@923 ]
-"2519
-[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 2519: extern volatile unsigned char ANSELA __attribute__((address(0x18C)));
-[v _ANSELA `Vuc ~T0 @X0 0 e@396 ]
-"2584
-[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 2584: extern volatile unsigned char ANSELC __attribute__((address(0x18E)));
-[v _ANSELC `Vuc ~T0 @X0 0 e@398 ]
-"21 ./leds.h
-[; ;./leds.h: 21: void LED_Init();
-[v _LED_Init `(v ~T0 @X0 0 e? ]
-"20 ./alcohol_drive.h
-[; ;./alcohol_drive.h: 20: void init_alcohol();
-[v _init_alcohol `(v ~T0 @X0 0 e? ]
-"105 system.c
-[; ;system.c: 105:             LED_Off(LED_CONNECT);
-[c E3004 0 1 2 3 4 .. ]
-[n E3004 . LED_NONE LED_CONNECT LED_SCANNING LED_OK LED_NG  ]
-"19 ./leds.h
-[; ;./leds.h: 19: void LED_Off(LED led);
-[v _LED_Off `(v ~T0 @X0 0 ef1`E3004 ]
-[t ~ __interrupt . k ]
-[t T1 __interrupt ]
-"303 ./usb_device.h
-[; ;./usb_device.h: 303: void USBDeviceTasks(void);
-[v _USBDeviceTasks `(v ~T0 @X0 0 ef ]
+"1010 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1010:     struct {
+[s S63 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S63 . . TRISA4 TRISA5 ]
+"1009
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1009: typedef union {
+[u S62 `S63 1 ]
+[n S62 . . ]
+"1016
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1016: extern volatile TRISAbits_t TRISAbits __attribute__((address(0x08C)));
+[v _TRISAbits `VS62 ~T0 @X0 0 e@140 ]
+"435
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 435:     struct {
+[s S34 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S34 . RA0 RA1 . RA3 RA4 RA5 ]
+"434
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 434: typedef union {
+[u S33 `S34 1 ]
+[n S33 . . ]
+"444
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 444: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x00C)));
+[v _PORTAbits `VS33 ~T0 @X0 0 e@12 ]
 "54 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -465,127 +453,64 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6106
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 6106: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"30 system.c
-[p x FOSC  =  INTOSC     ]
-"31
-[p x WDTE  =  OFF        ]
-"32
-[p x PWRTE  =  OFF       ]
-"33
-[p x MCLRE  =  OFF       ]
-"34
-[p x CP  =  OFF          ]
-"35
-[p x BOREN  =  ON        ]
-"36
-[p x CLKOUTEN  =  OFF    ]
-"37
-[p x IESO  =  OFF        ]
-"38
-[p x FCMEN  =  OFF       ]
-"41
-[p x WRT  =  OFF         ]
-"42
-[p x CPUDIV  =  NOCLKDIV ]
-"43
-[p x USBLSCLK  =  48MHz  ]
-"44
-[p x PLLMULT  =  3x      ]
-"45
-[p x PLLEN  =  ENABLED   ]
-"46
-[p x STVREN  =  ON       ]
-"47
-[p x BORV  =  LO         ]
-"48
-[p x LPBOR  =  OFF       ]
-"49
-[p x LVP  =  OFF         ]
-"85
-[; ;system.c: 85: void SYSTEM_Initialize( SYSTEM_STATE state )
-[v _SYSTEM_Initialize `(v ~T0 @X0 1 ef1`E2309 ]
-"86
-[; ;system.c: 86: {
+"8 alcohol_drive.c
+[; ;alcohol_drive.c: 8: void init_alcohol(){
+[v _init_alcohol `(v ~T0 @X0 1 ef ]
 {
-[e :U _SYSTEM_Initialize ]
-"85
-[; ;system.c: 85: void SYSTEM_Initialize( SYSTEM_STATE state )
-[v _state `E2309 ~T0 @X0 1 r1 ]
-"86
-[; ;system.c: 86: {
+[e :U _init_alcohol ]
 [f ]
-"87
-[; ;system.c: 87:     switch(state)
-[e $U 383  ]
-"88
-[; ;system.c: 88:     {
-{
-"89
-[; ;system.c: 89:         case SYSTEM_STATE_USB_START:
-[e :U 384 ]
-"93
-[; ;system.c: 93:                 OSCCON = 0xFC;
-[e = _OSCCON -> -> 252 `i `uc ]
-"94
-[; ;system.c: 94:                 ACTCON = 0x90;
-[e = _ACTCON -> -> 144 `i `uc ]
-"96
-[; ;system.c: 96:             ANSELA = 0x00;
-[e = _ANSELA -> -> 0 `i `uc ]
-"97
-[; ;system.c: 97:             ANSELC = 0x00;
-[e = _ANSELC -> -> 0 `i `uc ]
-"99
-[; ;system.c: 99:             LED_Init();
-[e ( _LED_Init ..  ]
-"101
-[; ;system.c: 101:             init_alcohol();
-[e ( _init_alcohol ..  ]
-"102
-[; ;system.c: 102:             break;
-[e $U 382  ]
-"104
-[; ;system.c: 104:         case SYSTEM_STATE_USB_SUSPEND:
-[e :U 385 ]
-"105
-[; ;system.c: 105:             LED_Off(LED_CONNECT);
-[e ( _LED_Off (1 . `E3004 1 ]
-"106
-[; ;system.c: 106:             break;
-[e $U 382  ]
-"108
-[; ;system.c: 108:         case SYSTEM_STATE_USB_RESUME:
-[e :U 386 ]
-"109
-[; ;system.c: 109:             break;
-[e $U 382  ]
-"110
-[; ;system.c: 110:     }
+"9
+[; ;alcohol_drive.c: 9:     TRISAbits.TRISA5 = 1;
+[e = . . _TRISAbits 0 2 -> -> 1 `i `uc ]
+"10
+[; ;alcohol_drive.c: 10: }
+[e :UE 327 ]
 }
-[e $U 382  ]
-[e :U 383 ]
-[e [\ -> _state `ui , $ -> . `E2309 0 `ui 384
- , $ -> . `E2309 1 `ui 385
- , $ -> . `E2309 2 `ui 386
- 382 ]
-[e :U 382 ]
-"111
-[; ;system.c: 111: }
-[e :UE 381 ]
-}
-[v $root$_SYS_InterruptHigh `(v ~T0 @X0 0 e ]
-"119
-[; ;system.c: 119: void __attribute__((picinterrupt(("")))) SYS_InterruptHigh(void)
-[v _SYS_InterruptHigh `(v ~T1 @X0 1 ef ]
-"120
-[; ;system.c: 120: {
+"16
+[; ;alcohol_drive.c: 16: _Bool check_alcohol(){
+[v _check_alcohol `(a ~T0 @X0 1 ef ]
 {
-[e :U _SYS_InterruptHigh ]
+[e :U _check_alcohol ]
 [f ]
-"122
-[; ;system.c: 122:         USBDeviceTasks();
-[e ( _USBDeviceTasks ..  ]
-"124
-[; ;system.c: 124: }
-[e :UE 387 ]
+"17
+[; ;alcohol_drive.c: 17:     _Bool ret = 1;
+[v _ret `a ~T0 @X0 1 a ]
+[e = _ret -> -> 1 `i `a ]
+"18
+[; ;alcohol_drive.c: 18:     for(uint8_t i = 0; i < 100; i++){
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 100 `i 329  ]
+[e $U 330  ]
+[e :U 329 ]
+{
+"20
+[; ;alcohol_drive.c: 20:         if(PORTAbits.RA5 == 0){
+[e $ ! == -> . . _PORTAbits 0 5 `i -> 0 `i 332  ]
+{
+"21
+[; ;alcohol_drive.c: 21:             ret = 0;
+[e = _ret -> -> 0 `i `a ]
+"22
+[; ;alcohol_drive.c: 22:             break;
+[e $U 330  ]
+"23
+[; ;alcohol_drive.c: 23:         }
+}
+[e :U 332 ]
+"24
+[; ;alcohol_drive.c: 24:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 100 `i 329  ]
+[e :U 330 ]
+}
+"25
+[; ;alcohol_drive.c: 25:     return ret;
+[e ) _ret ]
+[e $UE 328  ]
+"26
+[; ;alcohol_drive.c: 26: }
+[e :UE 328 ]
 }

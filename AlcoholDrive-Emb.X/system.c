@@ -20,6 +20,8 @@ please contact mla_licensing@microchip.com
 #include <xc.h>
 #include "system.h"
 #include "usb.h"
+#include "leds.h"
+#include "alcohol_drive.h"
 
 /** CONFIGURATION Bits **********************************************/
 // PIC16F1459 configuration bit settings:
@@ -91,9 +93,16 @@ void SYSTEM_Initialize( SYSTEM_STATE state )
                 OSCCON = 0xFC;  //HFINTOSC @ 16MHz, 3X PLL, PLL enabled
                 ACTCON = 0x90;  //Active clock tuning enabled for USB
             #endif
+            ANSELA = 0x00;
+            ANSELC = 0x00;
+            //LED初期化
+            LED_Init();
+            //アルコールセンサー初期化
+            init_alcohol();
             break;
             
         case SYSTEM_STATE_USB_SUSPEND: 
+            LED_Off(LED_CONNECT);
             break;
             
         case SYSTEM_STATE_USB_RESUME:

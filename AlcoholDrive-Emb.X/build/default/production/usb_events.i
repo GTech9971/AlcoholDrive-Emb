@@ -4996,7 +4996,31 @@ void APP_DeviceCustomHIDStart(void);
 # 64 "./app_device_custom_hid.h"
 void APP_DeviceCustomHIDTasks(void);
 # 26 "usb_events.c" 2
-# 50 "usb_events.c"
+
+# 1 "./leds.h" 1
+
+
+
+
+
+typedef enum
+{
+    LED_NONE,
+    LED_CONNECT,
+    LED_SCANNING,
+    LED_OK,
+    LED_NG
+} LED;
+
+
+
+void LED_On(LED led);
+
+void LED_Off(LED led);
+
+void LED_Init();
+# 27 "usb_events.c" 2
+# 51 "usb_events.c"
 _Bool USER_USB_CALLBACK_EVENT_HANDLER(USB_EVENT event, void *pdata, uint16_t size)
 {
     switch((int)event)
@@ -5011,8 +5035,9 @@ _Bool USER_USB_CALLBACK_EVENT_HANDLER(USB_EVENT event, void *pdata, uint16_t siz
             break;
 
         case EVENT_SUSPEND:
-# 73 "usb_events.c"
+# 74 "usb_events.c"
             SYSTEM_Initialize(SYSTEM_STATE_USB_SUSPEND);
+            LED_Off(LED_CONNECT);
             break;
 
         case EVENT_RESUME:
@@ -5030,6 +5055,7 @@ _Bool USER_USB_CALLBACK_EVENT_HANDLER(USB_EVENT event, void *pdata, uint16_t siz
 
 
             APP_DeviceCustomHIDInitialize();
+            LED_On(LED_CONNECT);
             break;
 
         case EVENT_SET_DESCRIPTOR:

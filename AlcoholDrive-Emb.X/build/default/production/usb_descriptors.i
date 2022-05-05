@@ -5072,17 +5072,17 @@ sizeof(sd000),0x03,{0x0409
 }};
 
 
-const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[25];}sd001={
+const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[15];}sd001={
 sizeof(sd001),0x03,
-{'M','i','c','r','o','c','h','i','p',' ',
-'T','e','c','h','n','o','l','o','g','y',' ','I','n','c','.'
+{'G','o','r','g','e',' ',
+'T','e','c','h',' ','I','n','c','.'
 }};
 
 
-const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[22];}sd002={
+const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[13];}sd002={
 sizeof(sd002),0x03,
-{'S','i','m','p','l','e',' ','H','I','D',' ',
-'D','e','v','i','c','e',' ','D','e','m','o'
+{'A','l','c','o','h','o','l',' ',
+'D','r','i','v','e'
 }};
 
 
