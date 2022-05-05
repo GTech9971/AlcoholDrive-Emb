@@ -429,12 +429,12 @@ LED_NG 4
 [s S177 . 4 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[1]us 1 string 2 2 ]
 "220
 [v _sd000 sd000 `DCS177  1 e 4 0 ]
-[s S181 . 32 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[15]us 1 string 30 2 ]
+[s S181 . 34 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[16]us 1 string 32 2 ]
 "225
-[v _sd001 sd001 `DCS181  1 e 32 0 ]
-[s S185 . 28 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[13]us 1 string 26 2 ]
+[v _sd001 sd001 `DCS181  1 e 34 0 ]
+[s S185 . 42 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[20]us 1 string 40 2 ]
 "232
-[v _sd002 sd002 `DCS185  1 e 28 0 ]
+[v _sd002 sd002 `DCS185  1 e 42 0 ]
 [s S189 . 29 `[29]uc 1 report 29 0 ]
 "239
 [v _hid_rpt01 hid_rpt01 `DCS189  1 e 29 0 ]

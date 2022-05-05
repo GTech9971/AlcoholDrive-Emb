@@ -222,17 +222,17 @@ sizeof(sd000),USB_DESCRIPTOR_STRING,{0x0409
 }};
 
 //Manufacturer string descriptor
-const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[15];}sd001={
+const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[16];}sd001={
 sizeof(sd001),USB_DESCRIPTOR_STRING,
-{'G','o','r','g','e',' ',
+{'G','e','o','r','g','e',' ',
 'T','e','c','h',' ','I','n','c','.'
 }};
 
 //Product string descriptor
-const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[13];}sd002={
+const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[20];}sd002={
 sizeof(sd002),USB_DESCRIPTOR_STRING,
 {'A','l','c','o','h','o','l',' ',
-'D','r','i','v','e'
+'D','r','i','v','e',' ','A','L','C','0','0','1'
 }};
 
 //Class specific descriptor - HID 

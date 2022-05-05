@@ -8,12 +8,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [s S383 `uc 1 `uc 1 `us -> -> 1 `i `ux ]
 [n S383 . bLength bDscType string ]
 "225
-[; ;usb_descriptors.c: 225: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[15];}sd001={
-[s S384 `uc 1 `uc 1 `us -> 15 `i ]
+[; ;usb_descriptors.c: 225: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[16];}sd001={
+[s S384 `uc 1 `uc 1 `us -> 16 `i ]
 [n S384 . bLength bDscType string ]
 "232
-[; ;usb_descriptors.c: 232: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[13];}sd002={
-[s S385 `uc 1 `uc 1 `us -> 13 `i ]
+[; ;usb_descriptors.c: 232: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[20];}sd002={
+[s S385 `uc 1 `uc 1 `us -> 20 `i ]
 [n S385 . bLength bDscType string ]
 "239
 [; ;usb_descriptors.c: 239: const struct{uint8_t report[29];}hid_rpt01={
@@ -537,7 +537,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "225
-[; ;usb_descriptors.c: 225: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[15];}sd001={
+[; ;usb_descriptors.c: 225: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[16];}sd001={
 [v _sd001 `CS384 ~T0 @X0 1 e ]
 [i _sd001
 :U ..
@@ -546,6 +546,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 3 `i `uc
 :U ..
 -> -> 71 `ui `us
+-> -> 101 `ui `us
 -> -> 111 `ui `us
 -> -> 114 `ui `us
 -> -> 103 `ui `us
@@ -565,7 +566,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "232
-[; ;usb_descriptors.c: 232: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[13];}sd002={
+[; ;usb_descriptors.c: 232: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[20];}sd002={
 [v _sd002 `CS385 ~T0 @X0 1 e ]
 [i _sd002
 :U ..
@@ -586,6 +587,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 105 `ui `us
 -> -> 118 `ui `us
 -> -> 101 `ui `us
+-> -> 32 `ui `us
+-> -> 65 `ui `us
+-> -> 76 `ui `us
+-> -> 67 `ui `us
+-> -> 48 `ui `us
+-> -> 48 `ui `us
+-> -> 49 `ui `us
 ..
 ..
 ..

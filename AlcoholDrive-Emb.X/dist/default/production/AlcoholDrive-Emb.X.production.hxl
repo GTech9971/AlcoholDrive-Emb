@@ -10,13 +10,13 @@
  Intel Hex-file ranges:
   0h - 3h		(dist/default/production\AlcoholDrive-Emb.X.production.hex)
   8h - FFDh		(dist/default/production\AlcoholDrive-Emb.X.production.hex)
-  1000h - 2133h		(dist/default/production\AlcoholDrive-Emb.X.production.hex)
+  1000h - 2153h		(dist/default/production\AlcoholDrive-Emb.X.production.hex)
   2FEEh - 300Bh		(dist/default/production\AlcoholDrive-Emb.X.production.hex)
   1000Eh - 10011h		(dist/default/production\AlcoholDrive-Emb.X.production.hex)
  Unused ranges:
   4h - 7h
   FFEh - FFFh
-  2134h - 2FEDh
+  2154h - 2FEDh
   300Ch - 1000Dh
 
 ### Hex Memory Map ###
@@ -557,7 +557,9 @@
 00002100 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002110 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002120 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002130 | H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- --
+00002130 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002140 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002150 | H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
 00002FE0 | -- -- -- -- -- -- -- -- -- -- -- -- -- -- H1 H1
 00002FF0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
