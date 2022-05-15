@@ -477,33 +477,34 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ret `a ~T0 @X0 1 a ]
 [e = _ret -> -> 1 `i `a ]
 "18
-[; ;alcohol_drive.c: 18:     for(uint8_t i = 0; i < 100; i++){
+[; ;alcohol_drive.c: 18:     uint16_t max = 1000;
+[v _max `us ~T0 @X0 1 a ]
+[e = _max -> -> 1000 `i `us ]
+"19
+[; ;alcohol_drive.c: 19:     for(uint16_t i = 0; i < max; i++){
 {
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 100 `i 329  ]
-[e $U 330  ]
+[v _i `us ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `us ]
+[e $U 332  ]
 [e :U 329 ]
 {
-"20
-[; ;alcohol_drive.c: 20:         if(PORTAbits.RA5 == 0){
-[e $ ! == -> . . _PORTAbits 0 5 `i -> 0 `i 332  ]
-{
 "21
-[; ;alcohol_drive.c: 21:             ret = 0;
-[e = _ret -> -> 0 `i `a ]
+[; ;alcohol_drive.c: 21:         if(PORTAbits.RA5 == 0){
+[e $ ! == -> . . _PORTAbits 0 5 `i -> 0 `i 333  ]
+{
 "22
-[; ;alcohol_drive.c: 22:             break;
-[e $U 330  ]
+[; ;alcohol_drive.c: 22:             ret = 0;
+[e = _ret -> -> 0 `i `a ]
 "23
 [; ;alcohol_drive.c: 23:         }
 }
-[e :U 332 ]
+[e :U 333 ]
 "24
 [; ;alcohol_drive.c: 24:     }
 }
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 100 `i 329  ]
+[e ++ _i -> -> 1 `i `us ]
+[e :U 332 ]
+[e $ < -> _i `ui -> _max `ui 329  ]
 [e :U 330 ]
 }
 "25

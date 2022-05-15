@@ -91,7 +91,6 @@ void APP_DeviceCustomHIDTasks()
                     
                     //結果送信
                     USBInHandle = HIDTxPacket(CUSTOM_DEVICE_HID_EP, (uint8_t*)&ToSendDataBuffer[0],64);
-                    LED_Off(LED_SCANNING);
                 }
                 break;
             case STOP_SCANNING://スキャン停止
@@ -99,6 +98,7 @@ void APP_DeviceCustomHIDTasks()
                 {
                     LED_Off(LED_NG);
                     LED_Off(LED_OK);
+                    LED_Off(LED_SCANNING);
                 }
                 break;
         }

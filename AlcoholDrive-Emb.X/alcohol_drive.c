@@ -15,11 +15,11 @@ void init_alcohol(){
  */
 bool check_alcohol(){
     bool ret = true;
-    for(uint8_t i = 0; i < 100; i++){
+    uint16_t max = 1000;
+    for(uint16_t i = 0; i < max; i++){
         //0でアルコール未検地
         if(PORTAbits.RA5 == 0){
             ret = false;
-            break;
         }
     }
     return ret;

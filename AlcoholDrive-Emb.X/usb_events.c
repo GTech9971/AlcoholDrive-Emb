@@ -73,6 +73,9 @@ bool USER_USB_CALLBACK_EVENT_HANDLER(USB_EVENT event, void *pdata, uint16_t size
             //don't consume power from the host.
             SYSTEM_Initialize(SYSTEM_STATE_USB_SUSPEND);
             LED_Off(LED_CONNECT);
+            LED_Off(LED_SCANNING);
+            LED_Off(LED_OK);
+            LED_Off(LED_NG);
             break;
 
         case EVENT_RESUME:

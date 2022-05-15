@@ -25,21 +25,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _UCONbits `VS309 ~T0 @X0 0 e@3726 ]
 "81 app_device_custom_hid.c
 [; ;app_device_custom_hid.c: 81:                     LED_On(LED_SCANNING);
-[c E3027 0 1 2 3 4 .. ]
-[n E3027 . LED_NONE LED_CONNECT LED_SCANNING LED_OK LED_NG  ]
+[c E3018 0 1 2 3 4 .. ]
+[n E3018 . LED_NONE LED_CONNECT LED_SCANNING LED_OK LED_NG  ]
 "17 ./leds.h
 [; ;./leds.h: 17: void LED_On(LED led);
-[v _LED_On `(v ~T0 @X0 0 ef1`E3027 ]
+[v _LED_On `(v ~T0 @X0 0 ef1`E3018 ]
 "26 ./alcohol_drive.h
 [; ;./alcohol_drive.h: 26: _Bool check_alcohol();
 [v _check_alcohol `(a ~T0 @X0 0 e? ]
 "85 app_device_custom_hid.c
 [; ;app_device_custom_hid.c: 85:                         ToSendDataBuffer[0] = ALCOHOL_OK;
-[c E3019 129 130 128 112 .. ]
-[n E3019 . ALCOHOL_OK ALCOHOL_NG START_SCANNING STOP_SCANNING  ]
+[c E3010 129 130 128 112 .. ]
+[n E3010 . ALCOHOL_OK ALCOHOL_NG START_SCANNING STOP_SCANNING  ]
 "19 ./leds.h
 [; ;./leds.h: 19: void LED_Off(LED led);
-[v _LED_Off `(v ~T0 @X0 0 ef1`E3027 ]
+[v _LED_Off `(v ~T0 @X0 0 ef1`E3018 ]
 "54 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -562,7 +562,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "81
 [; ;app_device_custom_hid.c: 81:                     LED_On(LED_SCANNING);
-[e ( _LED_On (1 . `E3027 2 ]
+[e ( _LED_On (1 . `E3018 2 ]
 "82
 [; ;app_device_custom_hid.c: 82:                     _Bool result = check_alcohol();
 [v _result `a ~T0 @X0 1 a ]
@@ -573,10 +573,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "85
 [; ;app_device_custom_hid.c: 85:                         ToSendDataBuffer[0] = ALCOHOL_OK;
-[e = *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> . `E3019 0 `uc ]
+[e = *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> . `E3010 0 `uc ]
 "86
 [; ;app_device_custom_hid.c: 86:                         LED_On(LED_OK);
-[e ( _LED_On (1 . `E3027 3 ]
+[e ( _LED_On (1 . `E3018 3 ]
 "87
 [; ;app_device_custom_hid.c: 87:                     }else{
 }
@@ -585,10 +585,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "88
 [; ;app_device_custom_hid.c: 88:                         ToSendDataBuffer[0] = ALCOHOL_NG;
-[e = *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> . `E3019 1 `uc ]
+[e = *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> . `E3010 1 `uc ]
 "89
 [; ;app_device_custom_hid.c: 89:                         LED_On(LED_NG);
-[e ( _LED_On (1 . `E3027 4 ]
+[e ( _LED_On (1 . `E3018 4 ]
 "90
 [; ;app_device_custom_hid.c: 90:                     }
 }
@@ -597,30 +597,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;app_device_custom_hid.c: 93:                     USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
 [e = _USBInHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 1 `i `uc &U *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 64 `i `uc `*Vv ]
 "94
-[; ;app_device_custom_hid.c: 94:                     LED_Off(LED_SCANNING);
-[e ( _LED_Off (1 . `E3027 2 ]
-"95
-[; ;app_device_custom_hid.c: 95:                 }
+[; ;app_device_custom_hid.c: 94:                 }
 }
 [e :U 391 ]
-"96
-[; ;app_device_custom_hid.c: 96:                 break;
+"95
+[; ;app_device_custom_hid.c: 95:                 break;
 [e $U 388  ]
-"97
-[; ;app_device_custom_hid.c: 97:             case STOP_SCANNING:
+"96
+[; ;app_device_custom_hid.c: 96:             case STOP_SCANNING:
 [e :U 394 ]
-"98
-[; ;app_device_custom_hid.c: 98:                 if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
+"97
+[; ;app_device_custom_hid.c: 97:                 if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
 [e $ ! ! && != _USBInHandle -> -> 0 `i `*Vv != & -> *U -> _USBInHandle `*Vuc `i -> 128 `i -> 0 `i 395  ]
-"99
-[; ;app_device_custom_hid.c: 99:                 {
+"98
+[; ;app_device_custom_hid.c: 98:                 {
 {
+"99
+[; ;app_device_custom_hid.c: 99:                     LED_Off(LED_NG);
+[e ( _LED_Off (1 . `E3018 4 ]
 "100
-[; ;app_device_custom_hid.c: 100:                     LED_Off(LED_NG);
-[e ( _LED_Off (1 . `E3027 4 ]
+[; ;app_device_custom_hid.c: 100:                     LED_Off(LED_OK);
+[e ( _LED_Off (1 . `E3018 3 ]
 "101
-[; ;app_device_custom_hid.c: 101:                     LED_Off(LED_OK);
-[e ( _LED_Off (1 . `E3027 3 ]
+[; ;app_device_custom_hid.c: 101:                     LED_Off(LED_SCANNING);
+[e ( _LED_Off (1 . `E3018 2 ]
 "102
 [; ;app_device_custom_hid.c: 102:                 }
 }
@@ -633,8 +633,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 388  ]
 [e :U 389 ]
-[e [\ -> *U + &U _ReceivedDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux `i , $ . `E3019 2 390
- , $ . `E3019 3 394
+[e [\ -> *U + &U _ReceivedDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux `i , $ . `E3010 2 390
+ , $ . `E3010 3 394
  388 ]
 [e :U 388 ]
 "109
