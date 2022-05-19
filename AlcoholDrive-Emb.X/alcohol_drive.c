@@ -1,6 +1,8 @@
 #include "alcohol_drive.h"
 #include <stdint.h>
 
+#define _XTAL_FREQ 48000000
+
 #define PIN_INPUT  1
 #define PIN_OUTPUT 0
 
@@ -10,17 +12,18 @@ void init_alcohol(){
 }
 
 /**
- * アルコール検知を行う
+ * アルコール検知を行う 3秒間ぐらい計測する
  * @return true:アルコール未検地, false:アルコール検知
  */
 bool check_alcohol(){
     bool ret = true;
-    uint16_t max = 1000;
+    uint16_t max = 300;
     for(uint16_t i = 0; i < max; i++){
         //0でアルコール未検地
         if(PORTAbits.RA5 == 0){
             ret = false;
         }
+        __delay_ms(10);
     }
     return ret;
 }

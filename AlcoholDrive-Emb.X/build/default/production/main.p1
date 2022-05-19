@@ -2,11 +2,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
 "32 main.c
 [; ;main.c: 32:     SYSTEM_Initialize(SYSTEM_STATE_USB_START);
-[c E2300 0 1 2 .. ]
-[n E2300 . SYSTEM_STATE_USB_START SYSTEM_STATE_USB_SUSPEND SYSTEM_STATE_USB_RESUME  ]
+[c E2309 0 1 2 .. ]
+[n E2309 . SYSTEM_STATE_USB_START SYSTEM_STATE_USB_SUSPEND SYSTEM_STATE_USB_RESUME  ]
 "62 ./system.h
 [; ;./system.h: 62: void SYSTEM_Initialize( SYSTEM_STATE state );
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef1`E2300 ]
+[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef1`E2309 ]
 "199 ./usb_device.h
 [; ;./usb_device.h: 199: void USBDeviceInit(void);
 [v _USBDeviceInit `(v ~T0 @X0 0 ef ]
@@ -459,7 +459,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "32
 [; ;main.c: 32:     SYSTEM_Initialize(SYSTEM_STATE_USB_START);
-[e ( _SYSTEM_Initialize (1 . `E2300 0 ]
+[e ( _SYSTEM_Initialize (1 . `E2309 0 ]
 "34
 [; ;main.c: 34:     USBDeviceInit();
 [e ( _USBDeviceInit ..  ]

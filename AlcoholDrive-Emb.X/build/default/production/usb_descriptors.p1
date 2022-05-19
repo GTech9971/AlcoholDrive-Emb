@@ -638,7 +638,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-[v F3025 `*Cuc ~T0 @X0 1 t ]
+[v F3034 `*Cuc ~T0 @X0 1 t ]
 "259
 [; ;usb_descriptors.c: 259: const uint8_t *const USB_CD_Ptr[]=
 [v _USB_CD_Ptr `C*Cuc ~T0 @X0 -> -> 1 `i `ux e ]
@@ -647,7 +647,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> &U _configDescriptor1 `*Cuc
 ..
 ]
-[v F3029 `*Cuc ~T0 @X0 1 t ]
+[v F3038 `*Cuc ~T0 @X0 1 t ]
 "265
 [; ;usb_descriptors.c: 265: const uint8_t *const USB_SD_Ptr[]=
 [v _USB_SD_Ptr `C*Cuc ~T0 @X0 -> 3 `i e ]

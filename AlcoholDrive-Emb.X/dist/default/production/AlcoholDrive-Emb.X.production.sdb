@@ -14,7 +14,7 @@ ADDRESS_STATE 16
 CONFIGURED_STATE 32
 ]
 "81
-[e E3018 . `uc
+[e E3027 . `uc
 LED_NONE 0
 LED_CONNECT 1
 LED_SCANNING 2
@@ -22,26 +22,26 @@ LED_OK 3
 LED_NG 4
 ]
 "85
-[e E3010 . `uc
+[e E3019 . `uc
 ALCOHOL_OK 129
 ALCOHOL_NG 130
 START_SCANNING 128
 STOP_SCANNING 112
 ]
 "32 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\main.c
-[e E2300 . `uc
+[e E2309 . `uc
 SYSTEM_STATE_USB_START 0
 SYSTEM_STATE_USB_SUSPEND 1
 SYSTEM_STATE_USB_RESUME 2
 ]
 "85 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\system.c
-[e E2300 . `uc
+[e E2309 . `uc
 SYSTEM_STATE_USB_START 0
 SYSTEM_STATE_USB_SUSPEND 1
 SYSTEM_STATE_USB_RESUME 2
 ]
 "105
-[e E2995 . `uc
+[e E3004 . `uc
 LED_NONE 0
 LED_CONNECT 1
 LED_SCANNING 2
@@ -49,7 +49,7 @@ LED_OK 3
 LED_NG 4
 ]
 "141 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\usb_device.c
-[e E2761 . `uc
+[e E2770 . `uc
 DETACHED_STATE 0
 ATTACHED_STATE 1
 POWERED_STATE 2
@@ -59,7 +59,7 @@ ADDRESS_STATE 16
 CONFIGURED_STATE 32
 ]
 "717
-[e E2702 . `ui
+[e E2711 . `ui
 EVENT_NONE 0
 EVENT_DEVICE_STACK_BASE 1
 EVENT_HOST_STACK_BASE 100
@@ -98,7 +98,7 @@ EVENT_USER_BASE 10000
 EVENT_BUS_ERROR 32767
 ]
 "2021
-[e E2770 . `uc
+[e E2779 . `uc
 EVENT_CONFIGURED 1
 EVENT_SET_DESCRIPTOR 2
 EVENT_EP0_REQUEST 3
@@ -106,7 +106,7 @@ EVENT_ATTACH 4
 EVENT_TRANSFER_TERMINATED 5
 ]
 "51 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\usb_events.c
-[e E2541 . `ui
+[e E2550 . `ui
 EVENT_NONE 0
 EVENT_DEVICE_STACK_BASE 1
 EVENT_HOST_STACK_BASE 100
@@ -145,13 +145,13 @@ EVENT_USER_BASE 10000
 EVENT_BUS_ERROR 32767
 ]
 "74
-[e E2300 . `uc
+[e E2309 . `uc
 SYSTEM_STATE_USB_START 0
 SYSTEM_STATE_USB_SUSPEND 1
 SYSTEM_STATE_USB_RESUME 2
 ]
 "75
-[e E3013 . `uc
+[e E3022 . `uc
 LED_NONE 0
 LED_CONNECT 1
 LED_SCANNING 2
@@ -159,7 +159,7 @@ LED_OK 3
 LED_NG 4
 ]
 "116
-[e E2609 . `uc
+[e E2618 . `uc
 EVENT_CONFIGURED 1
 EVENT_SET_DESCRIPTOR 2
 EVENT_EP0_REQUEST 3
@@ -174,22 +174,22 @@ LED_SCANNING 2
 LED_OK 3
 LED_NG 4
 ]
-"8 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\alcohol_drive.c
+"10 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\alcohol_drive.c
 [v _init_alcohol init_alcohol `(v  1 e 1 0 ]
 [v i1_init_alcohol init_alcohol `(v  1 e 1 0 ]
-"16
+"18
 [v _check_alcohol check_alcohol `(a  1 e 1 0 ]
 "40 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\app_device_custom_hid.c
 [v _APP_DeviceCustomHIDInitialize APP_DeviceCustomHIDInitialize `(v  1 e 1 0 ]
 "54
 [v _APP_DeviceCustomHIDTasks APP_DeviceCustomHIDTasks `(v  1 e 1 0 ]
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\memcpy.c
+"4 C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\memcpy.c
 [v _memcpy memcpy `(*.4v  1 e 1 0 ]
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\memset.c
+"4 C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\memset.c
 [v _memset memset `(*.39v  1 e 1 0 ]
-"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
+"10 C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul8_16.c
+"4 C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 "26 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\leds.c
 [v _LED_On LED_On `(v  1 e 1 0 ]
@@ -644,15 +644,15 @@ LED_NG 4
 "85 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-[v SYSTEM_Initialize@state state `E2300  1 a 1 wreg ]
-[v SYSTEM_Initialize@state state `E2300  1 a 1 wreg ]
-[v SYSTEM_Initialize@state state `E2300  1 a 1 5 ]
+[v SYSTEM_Initialize@state state `E2309  1 a 1 wreg ]
+[v SYSTEM_Initialize@state state `E2309  1 a 1 wreg ]
+[v SYSTEM_Initialize@state state `E2309  1 a 1 5 ]
 "111
 } 0
-"8 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\alcohol_drive.c
+"10 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\alcohol_drive.c
 [v _init_alcohol init_alcohol `(v  1 e 1 0 ]
 {
-"10
+"12
 } 0
 "75 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\leds.c
 [v _LED_Init LED_Init `(v  1 e 1 0 ]
@@ -666,16 +666,16 @@ LED_NG 4
 [v APP_DeviceCustomHIDTasks@result result `a  1 a 1 13 ]
 "111
 } 0
-"16 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\alcohol_drive.c
+"18 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\alcohol_drive.c
 [v _check_alcohol check_alcohol `(a  1 e 1 0 ]
 {
+"21
+[v check_alcohol@i i `us  1 a 2 3 ]
+"20
+[v check_alcohol@max max `us  1 a 2 1 ]
 "19
-[v check_alcohol@i i `us  1 a 2 2 ]
-"18
-[v check_alcohol@max max `us  1 a 2 0 ]
-"17
-[v check_alcohol@ret ret `a  1 a 1 4 ]
-"26
+[v check_alcohol@ret ret `a  1 a 1 5 ]
+"29
 } 0
 "999 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\usb_device.c
 [v _USBTransferOnePacket USBTransferOnePacket `(*.39v  1 e 1 0 ]
@@ -782,7 +782,7 @@ LED_NG 4
 {
 "2430
 } 0
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\memcpy.c
+"4 C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\memcpy.c
 [v _memcpy memcpy `(*.4v  1 e 1 0 ]
 {
 [v memcpy@d1 d1 `*.4v  1 a 1 wreg ]
@@ -830,7 +830,7 @@ LED_NG 4
 [v USBStdSetCfgHandler@i i `uc  1 a 1 10 ]
 "2028
 } 0
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\memset.c
+"4 C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\memset.c
 [v _memset memset `(*.39v  1 e 1 0 ]
 {
 "6
@@ -925,7 +925,7 @@ LED_NG 4
 "51 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\usb_events.c
 [v _USER_USB_CALLBACK_EVENT_HANDLER USER_USB_CALLBACK_EVENT_HANDLER `(a  1 e 1 0 ]
 {
-[v USER_USB_CALLBACK_EVENT_HANDLER@event event `E2541  1 p 2 0 ]
+[v USER_USB_CALLBACK_EVENT_HANDLER@event event `E2550  1 p 2 0 ]
 [v USER_USB_CALLBACK_EVENT_HANDLER@pdata pdata `*.39v  1 p 2 2 ]
 [v USER_USB_CALLBACK_EVENT_HANDLER@size size `us  1 p 2 4 ]
 "118
@@ -933,15 +933,15 @@ LED_NG 4
 "85 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\system.c
 [v i1_SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-[v i1SYSTEM_Initialize@state state `E2300  1 a 1 wreg ]
-[v i1SYSTEM_Initialize@state state `E2300  1 a 1 wreg ]
-[v i1SYSTEM_Initialize@state state `E2300  1 a 1 5 ]
+[v i1SYSTEM_Initialize@state state `E2309  1 a 1 wreg ]
+[v i1SYSTEM_Initialize@state state `E2309  1 a 1 wreg ]
+[v i1SYSTEM_Initialize@state state `E2309  1 a 1 5 ]
 "111
 } 0
-"8 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\alcohol_drive.c
+"10 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\alcohol_drive.c
 [v i1_init_alcohol init_alcohol `(v  1 e 1 0 ]
 {
-"10
+"12
 } 0
 "51 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\leds.c
 [v i1_LED_Off LED_Off `(v  1 e 1 0 ]

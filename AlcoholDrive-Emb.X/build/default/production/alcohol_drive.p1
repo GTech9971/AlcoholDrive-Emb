@@ -21,6 +21,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "444
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 444: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x00C)));
 [v _PORTAbits `VS33 ~T0 @X0 0 e@12 ]
+[v F2298 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\pic.h
+[v __delay `JF2298 ~T0 @X0 0 e ]
+[p i __delay ]
 "54 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -453,65 +457,68 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6106
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 6106: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"8 alcohol_drive.c
-[; ;alcohol_drive.c: 8: void init_alcohol(){
+"10 alcohol_drive.c
+[; ;alcohol_drive.c: 10: void init_alcohol(){
 [v _init_alcohol `(v ~T0 @X0 1 ef ]
 {
 [e :U _init_alcohol ]
 [f ]
-"9
-[; ;alcohol_drive.c: 9:     TRISAbits.TRISA5 = 1;
+"11
+[; ;alcohol_drive.c: 11:     TRISAbits.TRISA5 = 1;
 [e = . . _TRISAbits 0 2 -> -> 1 `i `uc ]
-"10
-[; ;alcohol_drive.c: 10: }
+"12
+[; ;alcohol_drive.c: 12: }
 [e :UE 327 ]
 }
-"16
-[; ;alcohol_drive.c: 16: _Bool check_alcohol(){
+"18
+[; ;alcohol_drive.c: 18: _Bool check_alcohol(){
 [v _check_alcohol `(a ~T0 @X0 1 ef ]
 {
 [e :U _check_alcohol ]
 [f ]
-"17
-[; ;alcohol_drive.c: 17:     _Bool ret = 1;
+"19
+[; ;alcohol_drive.c: 19:     _Bool ret = 1;
 [v _ret `a ~T0 @X0 1 a ]
 [e = _ret -> -> 1 `i `a ]
-"18
-[; ;alcohol_drive.c: 18:     uint16_t max = 1000;
+"20
+[; ;alcohol_drive.c: 20:     uint16_t max = 300;
 [v _max `us ~T0 @X0 1 a ]
-[e = _max -> -> 1000 `i `us ]
-"19
-[; ;alcohol_drive.c: 19:     for(uint16_t i = 0; i < max; i++){
+[e = _max -> -> 300 `i `us ]
+"21
+[; ;alcohol_drive.c: 21:     for(uint16_t i = 0; i < max; i++){
 {
 [v _i `us ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `us ]
 [e $U 332  ]
 [e :U 329 ]
 {
-"21
-[; ;alcohol_drive.c: 21:         if(PORTAbits.RA5 == 0){
+"23
+[; ;alcohol_drive.c: 23:         if(PORTAbits.RA5 == 0){
 [e $ ! == -> . . _PORTAbits 0 5 `i -> 0 `i 333  ]
 {
-"22
-[; ;alcohol_drive.c: 22:             ret = 0;
+"24
+[; ;alcohol_drive.c: 24:             ret = 0;
 [e = _ret -> -> 0 `i `a ]
-"23
-[; ;alcohol_drive.c: 23:         }
+"25
+[; ;alcohol_drive.c: 25:         }
 }
 [e :U 333 ]
-"24
-[; ;alcohol_drive.c: 24:     }
+"26
+[; ;alcohol_drive.c: 26:         _delay((unsigned long)((10)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+"27
+[; ;alcohol_drive.c: 27:     }
 }
 [e ++ _i -> -> 1 `i `us ]
 [e :U 332 ]
 [e $ < -> _i `ui -> _max `ui 329  ]
 [e :U 330 ]
 }
-"25
-[; ;alcohol_drive.c: 25:     return ret;
+"28
+[; ;alcohol_drive.c: 28:     return ret;
 [e ) _ret ]
 [e $UE 328  ]
-"26
-[; ;alcohol_drive.c: 26: }
+"29
+[; ;alcohol_drive.c: 29: }
 [e :UE 328 ]
 }
