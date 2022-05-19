@@ -4,7 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/georg/Documents/GitHub/AlcoholDrive-Emb/AlcoholDrive-Emb.X/main.c</file>
-            <file>file:/C:/Users/georg/Documents/GitHub/AlcoholDrive-Emb/AlcoholDrive-Emb.X/usb_descriptors.c</file>
+            <file>file:/C:/Users/georg/Documents/GitHub/AlcoholDrive-Emb/AlcoholDrive-Emb.X/leds.c</file>
+            <file>file:/C:/Users/georg/Documents/GitHub/AlcoholDrive-Emb/AlcoholDrive-Emb.X/alcohol_drive.c</file>
+            <file>file:/C:/Users/georg/Documents/GitHub/AlcoholDrive-Emb/AlcoholDrive-Emb.X/app_device_custom_hid.c</file>
+            <file>file:/C:/Users/georg/Documents/GitHub/AlcoholDrive-Emb/AlcoholDrive-Emb.X/system.h</file>
         </group>
     </open-files>
 </project-private>

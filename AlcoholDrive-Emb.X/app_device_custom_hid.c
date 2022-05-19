@@ -78,6 +78,11 @@ void APP_DeviceCustomHIDTasks()
             case START_SCANNING:  //スキャン開始
                 if(!HIDTxHandleBusy(USBInHandle))
                 {    
+                    // LED停止
+                    LED_Off(LED_NG);
+                    LED_Off(LED_OK);
+                    LED_Off(LED_SCANNING);
+                    
                     LED_On(LED_SCANNING);
                     bool result = check_alcohol();
                     //アルコール未検知
@@ -96,9 +101,6 @@ void APP_DeviceCustomHIDTasks()
             case STOP_SCANNING://スキャン停止
                 if(!HIDTxHandleBusy(USBInHandle))
                 {
-                    LED_Off(LED_NG);
-                    LED_Off(LED_OK);
-                    LED_Off(LED_SCANNING);
                 }
                 break;
         }

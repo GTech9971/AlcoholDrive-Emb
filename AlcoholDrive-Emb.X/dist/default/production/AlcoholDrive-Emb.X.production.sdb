@@ -13,7 +13,7 @@ ADR_PENDING_STATE 8
 ADDRESS_STATE 16
 CONFIGURED_STATE 32
 ]
-"81
+"82
 [e E3027 . `uc
 LED_NONE 0
 LED_CONNECT 1
@@ -21,7 +21,7 @@ LED_SCANNING 2
 LED_OK 3
 LED_NG 4
 ]
-"85
+"90
 [e E3019 . `uc
 ALCOHOL_OK 129
 ALCOHOL_NG 130
@@ -662,9 +662,9 @@ LED_NG 4
 "54 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\app_device_custom_hid.c
 [v _APP_DeviceCustomHIDTasks APP_DeviceCustomHIDTasks `(v  1 e 1 0 ]
 {
-"82
+"87
 [v APP_DeviceCustomHIDTasks@result result `a  1 a 1 13 ]
-"111
+"113
 } 0
 "18 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\alcohol_drive.c
 [v _check_alcohol check_alcohol `(a  1 e 1 0 ]

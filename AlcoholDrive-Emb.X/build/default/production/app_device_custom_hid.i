@@ -5114,6 +5114,11 @@ void APP_DeviceCustomHIDTasks()
             case START_SCANNING:
                 if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
                 {
+
+                    LED_Off(LED_NG);
+                    LED_Off(LED_OK);
+                    LED_Off(LED_SCANNING);
+
                     LED_On(LED_SCANNING);
                     _Bool result = check_alcohol();
 
@@ -5132,9 +5137,6 @@ void APP_DeviceCustomHIDTasks()
             case STOP_SCANNING:
                 if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
                 {
-                    LED_Off(LED_NG);
-                    LED_Off(LED_OK);
-                    LED_Off(LED_SCANNING);
                 }
                 break;
         }

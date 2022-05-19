@@ -5,10 +5,10 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.35\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\AlcoholDrive-Emb.X.production.sym \
   --cmf=dist/default/production\AlcoholDrive-Emb.X.production.cmf -z \
-  -Q16F1459 -oC:\Users\georg\AppData\Local\Temp\xcAsdd0.4 \
+  -Q16F1459 -oC:\Users\georg\AppData\Local\Temp\xcAsneg.4 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/AlcoholDrive-Emb.X.production.map \
-  --md=C:\Users\georg\AppData\Local\Temp\xcAsdd0.dat -E1 -ver=XC8 Compiler \
+  --md=C:\Users\georg\AppData\Local\Temp\xcAsneg.dat -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
   -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh \
   -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh -ABANK2=0120h-016Fh \
@@ -32,7 +32,7 @@ Linker command line:
   -AIDLOC=08000h-08003h -DIDLOC=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k \
-  C:\Users\georg\AppData\Local\Temp\xcAsdd0.o \
+  C:\Users\georg\AppData\Local\Temp\xcAsneg.o \
   dist/default/production\AlcoholDrive-Emb.X.production.o 
 
 Object code version is 3.11
@@ -42,7 +42,7 @@ Machine type is 16F1459
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\georg\AppData\Local\Temp\xcAsdd0.o
+C:\Users\georg\AppData\Local\Temp\xcAsneg.o
                 end_init                              B        B        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2        0       4
@@ -59,21 +59,21 @@ dist/default/production\AlcoholDrive-Emb.X.production.o
                 text38                              89A      89A       25     1134       0
                 text37                              EF1      EF1       87     1DE2       0
                 text36                              81A      81A       1E     1034       0
-                text35                              6C8      6C8       9F        8       0
+                text35                              6C5      6C5       9F        8       0
                 text34                              8BF      8BF       28     117E       0
-                text33                             17D9     17D9        B     2FB2       0
+                text33                              804      804        B     1008       0
                 text32                              8E7      8E7       28     11CE       0
-                text31                              801      801        3     1002       0
+                text31                             17DB     17DB        3     2FB6       0
                 text30                              98B      98B       2B     1316       0
                 text29                              B04      B04       50     1608       0
                 text28                               2C       2C      156        8       0
                 text27                              E6E      E6E       83     1CDC       0
                 text26                              C0B      C0B       6A     1816       0
                 text25                              2A6      2A6       CA        8       0
-                text24                              767      767       8A        8       0
+                text24                              764      764       8A        8       0
                 text23                              D6D      D6D       7E     1ADA       0
                 text22                              BAF      BAF       5C     175E       0
-                text21                              626      626       A2        8       0
+                text21                              623      623       A2        8       0
                 text20                              AB9      AB9       4B     1572       0
                 text19                              A0E      A0E       2E     141C       0
                 text18                              B54      B54       5B     16A8       0
@@ -81,23 +81,23 @@ dist/default/production\AlcoholDrive-Emb.X.production.o
                 text16                              9E1      9E1       2D     13C2       0
                 text15                              838      838       20     1070       0
                 text14                              878      878       22     10F0       0
-                text13                              57D      57D       A9        8       0
+                text13                              57A      57A       A9        8       0
                 text12                              182      182      124        8       0
                 text10                              90F      90F       29     121E       0
                 text9                               938      938       29     1270       0
                 text8                               F78      F78       88     1EF0       0
                 text7                               961      961       2A     12C2       0
-                text6                               4D1      4D1       AC        8       0
-                text5                               7F1      7F1        B        8       0
-                text4                               7FC      7FC        3        8       0
+                text6                               4D1      4D1       A9        8       0
+                text5                               80F      80F        B     101E       0
+                text4                               801      801        3     1002       0
                 text3                               9B6      9B6       2B     136C       0
                 text2                               858      858       20     10B0       0
                 text1                               370      370       B3        8       0
-                maintext                            80A      80A       10     1014       0
+                maintext                            7EE      7EE       10        8       0
                 cstackBANK0                          50       50       15       50       1
                 cstackCOMMON                         70       70        E       70       1
                 cstackBANK1                          E0       E0        E       E0       1
-                clrtext                             804      804        6     1008       0
+                clrtext                            17DE     17DE        6     2FBC       0
                 bssBANK3                            1A0      1A0       1A      1A0       1
                 bssBANK2                            160      160       10      160       1
                 bssBANK1                             EE       EE        2       E0       1
@@ -126,21 +126,21 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text38                              89A      89A       25         0
                 text37                              EF1      EF1       87         0
                 text36                              81A      81A       1E         0
-                text35                              6C8      6C8       9F         0
+                text35                              6C5      6C5       9F         0
                 text34                              8BF      8BF       28         0
-                text33                             17D9     17D9        B         0
+                text33                              804      804        B         0
                 text32                              8E7      8E7       28         0
-                text31                              801      801        3         0
+                text31                             17DB     17DB        3         0
                 text30                              98B      98B       2B         0
                 text29                              B04      B04       50         0
                 text28                               2C       2C      156         0
                 text27                              E6E      E6E       83         0
                 text26                              C0B      C0B       6A         0
                 text25                              2A6      2A6       CA         0
-                text24                              767      767       8A         0
+                text24                              764      764       8A         0
                 text23                              D6D      D6D       7E         0
                 text22                              BAF      BAF       5C         0
-                text21                              626      626       A2         0
+                text21                              623      623       A2         0
                 text20                              AB9      AB9       4B         0
                 text19                              A0E      A0E       2E         0
                 text18                              B54      B54       5B         0
@@ -148,20 +148,20 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text16                              9E1      9E1       2D         0
                 text15                              838      838       20         0
                 text14                              878      878       22         0
-                text13                              57D      57D       A9         0
+                text13                              57A      57A       A9         0
                 text12                              182      182      124         0
                 text10                              90F      90F       29         0
                 text9                               938      938       29         0
                 text8                               F78      F78       88         0
                 text7                               961      961       2A         0
-                text6                               4D1      4D1       AC         0
-                text5                               7F1      7F1        B         0
-                text4                               7FC      7FC        3         0
+                text6                               4D1      4D1       A9         0
+                text5                               80F      80F        B         0
+                text4                               801      801        3         0
                 text3                               9B6      9B6       2B         0
                 text2                               858      858       20         0
                 text1                               370      370       B3         0
-                maintext                            80A      80A       10         0
-                clrtext                             804      804        6         0
+                maintext                            7EE      7EE       10         0
+                clrtext                            17DE     17DE        6         0
 
         CLASS   STRCODE        
                 stringtext8                        1818     1818        4         0
@@ -342,15 +342,15 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000002  000002         0       0  CODE        2
-                intentry                       000004  0007FB  0007FF         8       0  CODE        2
+                intentry                       000004  0007FA  0007FE         8       0  CODE        2
                 cstackBANK0                    000050  000020  000070        50       1  BANK0       1
                 cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
                 cstackBANK1                    0000E0  000010  0000F0        E0       1  BANK1       1
                 bssBANK2                       000160  000010  000170       160       1  BANK2       1
                 bssBANK3                       0001A0  00001A  0001BA       1A0       1  BANK3       1
-                text31                         000801  000003  000804      1002       0  CODE        2
-                clrtext                        000804  000006  00080A      1008       0  CODE        2
-                maintext                       00080A  000010  00081A      1014       0  CODE        2
+                text4                          000801  000003  000804      1002       0  CODE        2
+                text33                         000804  00000B  00080F      1008       0  CODE        2
+                text5                          00080F  00000B  00081A      101E       0  CODE        2
                 text36                         00081A  00001E  000838      1034       0  CODE        2
                 text15                         000838  000020  000858      1070       0  CODE        2
                 text2                          000858  000020  000878      10B0       0  CODE        2
@@ -380,7 +380,8 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 text37                         000EF1  000087  000F78      1DE2       0  CODE        2
                 text8                          000F78  000088  001000      1EF0       0  CODE        2
                 stringtext3                    001000  000092  001092      2000       0  STRCODE     2
-                text33                         0017D9  00000B  0017E4      2FB2       0  CODE        2
+                text31                         0017DB  000003  0017DE      2FB6       0  CODE        2
+                clrtext                        0017DE  000006  0017E4      2FBC       0  CODE        2
                 text17                         0017E4  00001C  001800      2FC8       0  CODE        2
                 stringtext7                    001800  00001E  00181E      3000       0  STRCODE     2
 
@@ -400,16 +401,16 @@ UNUSED ADDRESS RANGES
         BANK9            004A0-004EF              50           1
         BIGRAM           02000-023EF             3F0           1
         CODE             00002-00003               2           2
-                         007FF-00800               1
-                         01092-017D8             747
+                         007FE-00800               2
+                         01092-017DA             749
                          0181E-01FFF             7E2
         CONST            00002-00003               2           2
-                         007FF-00800               1
-                         01092-017D8             100
+                         007FE-00800               2
+                         01092-017DA             100
                          0181E-01FFF             100
         ENTRY            00002-00003               2           2
-                         007FF-00800               1
-                         01092-017D8             100
+                         007FE-00800               2
+                         01092-017DA             100
                          0181E-01FFF             100
         IDLOC            08000-08003               4           2
         RAM              001BA-001EF              36           1
@@ -455,12 +456,12 @@ UNUSED ADDRESS RANGES
         SFR8             00400-0041F              20           1
         SFR9             00480-0049F              20           1
         STRCODE          00002-00003               2           2
-                         007FF-00800               2
-                         01092-017D8             747
+                         007FE-00800               3
+                         01092-017DA             749
                          0181E-01FFF             7E2
         STRING           00002-00003               2           2
-                         007FF-00800               1
-                         01092-017D8             100
+                         007FE-00800               2
+                         01092-017DA             100
                          0181E-01FFF             100
 
                                   Symbol Table
@@ -510,7 +511,7 @@ _BothEP0OutUOWNsSet                      bssBANK3     001B4
 _CtrlTrfData                             (abs)        00048
 _INTCONbits                              (abs)        0000B
 _LATCbits                                (abs)        0010E
-_LED_Init                                text5        007F1
+_LED_Init                                text5        0080F
 _LED_Off                                 text10       0090F
 _LED_On                                  text9        00938
 _OSCCON                                  (abs)        00099
@@ -542,13 +543,13 @@ _USB1msTickCount                         bssBANK3     001A0
 _USBActiveConfiguration                  bssBANK2     0016F
 _USBAlternateInterface                   bssBANK2     0016E
 _USBBusIsSuspended                       bssBANK3     001B5
-_USBCheckHIDRequest                      text35       006C8
+_USBCheckHIDRequest                      text35       006C5
 _USBCheckStdRequest                      text23       00D6D
 _USBConfigureEndpoint                    text39       00A76
 _USBCtrlEPAllowDataStage                 text22       00BAF
 _USBCtrlEPAllowStatusStage               text42       00C75
 _USBCtrlEPService                        text18       00B54
-_USBCtrlEPServiceComplete                text21       00626
+_USBCtrlEPServiceComplete                text21       00623
 _USBCtrlTrfInHandler                     text43       00CEF
 _USBCtrlTrfOutHandler                    text40       00A3C
 _USBCtrlTrfRxService                     text41       00423
@@ -572,7 +573,7 @@ _USBStatusStageTimeoutCounter            bssBANK3     001B3
 _USBStdFeatureReqHandler                 text28       0002C
 _USBStdGetDscHandler                     text27       00E6E
 _USBStdGetStatusHandler                  text26       00C0B
-_USBStdSetCfgHandler                     text24       00767
+_USBStdSetCfgHandler                     text24       00764
 _USBSuspend                              text15       00838
 _USBTicksSinceSuspendEnd                 bssBANK3     001AE
 _USBTransferOnePacket                    text8        00F78
@@ -800,19 +801,19 @@ ___sp                                    stack        00000
 ___stackhi                               (abs)        00000
 ___stacklo                               (abs)        00000
 __end_of_APP_DeviceCustomHIDInitialize   text36       00838
-__end_of_APP_DeviceCustomHIDTasks        text6        0057D
-__end_of_LED_Init                        text5        007FC
+__end_of_APP_DeviceCustomHIDTasks        text6        0057A
+__end_of_LED_Init                        text5        0081A
 __end_of_LED_Off                         text10       00938
 __end_of_LED_On                          text9        00961
 __end_of_SYSTEM_Initialize               text3        009E1
 __end_of_SYS_InterruptHigh               intentry     0000B
-__end_of_USBCheckHIDRequest              text35       00767
+__end_of_USBCheckHIDRequest              text35       00764
 __end_of_USBCheckStdRequest              text23       00DEB
 __end_of_USBConfigureEndpoint            text39       00AB9
 __end_of_USBCtrlEPAllowDataStage         text22       00C0B
 __end_of_USBCtrlEPAllowStatusStage       text42       00CEF
 __end_of_USBCtrlEPService                text18       00BAF
-__end_of_USBCtrlEPServiceComplete        text21       006C8
+__end_of_USBCtrlEPServiceComplete        text21       006C5
 __end_of_USBCtrlTrfInHandler             text43       00D6D
 __end_of_USBCtrlTrfOutHandler            text40       00A76
 __end_of_USBCtrlTrfRxService             text41       004D1
@@ -827,7 +828,7 @@ __end_of_USBStallHandler                 text16       00A0E
 __end_of_USBStdFeatureReqHandler         text28       00182
 __end_of_USBStdGetDscHandler             text27       00EF1
 __end_of_USBStdGetStatusHandler          text26       00C75
-__end_of_USBStdSetCfgHandler             text24       007F1
+__end_of_USBStdSetCfgHandler             text24       007EE
 __end_of_USBSuspend                      text15       00858
 __end_of_USBTransferOnePacket            text8        01000
 __end_of_USBWakeFromSuspend              text14       0089A
@@ -839,20 +840,20 @@ __end_of_check_alcohol                   text7        0098B
 __end_of_configDescriptor1               stringtext4  01053
 __end_of_device_dsc                      stringtext7  01812
 __end_of_hid_rpt01                       stringtext6  01092
-__end_of_init_alcohol                    text4        007FF
-__end_of_main                            maintext     0081A
+__end_of_init_alcohol                    text4        00804
+__end_of_main                            maintext     007FE
 __end_of_memcpy                          text19       00A3C
 __end_of_memset                          text25       00370
 __end_of_sd000                           stringtext8  0181C
 __end_of_sd001                           stringtext5  01075
 __end_of_sd002                           stringtext3  0102A
-__end_ofi1_LED_Init                      text33       017E4
+__end_ofi1_LED_Init                      text33       0080F
 __end_ofi1_LED_Off                       text32       0090F
 __end_ofi1_LED_On                        text34       008E7
 __end_ofi1_SYSTEM_Initialize             text30       009B6
-__end_ofi1_USBDeviceInit                 text13       00626
+__end_ofi1_USBDeviceInit                 text13       00623
 __end_ofi1_USBTransferOnePacket          text37       00F78
-__end_ofi1_init_alcohol                  text31       00804
+__end_ofi1_init_alcohol                  text31       017DE
 __initialization                         cinit        0000D
 __pbssBANK0                              bssBANK0     00065
 __pbssBANK1                              bssBANK1     000EE
@@ -862,7 +863,7 @@ __pcstackBANK0                           cstackBANK0  00050
 __pcstackBANK1                           cstackBANK1  000E0
 __pcstackCOMMON                          cstackCOMMON 00070
 __pintentry                              intentry     00004
-__pmaintext                              maintext     0080A
+__pmaintext                              maintext     007EE
 __pstringtext1                           stringtext1  01812
 __pstringtext2                           stringtext2  0181C
 __pstringtext3                           stringtext3  01000
@@ -874,7 +875,7 @@ __pstringtext8                           stringtext8  01818
 __ptext1                                 text1        00370
 __ptext10                                text10       0090F
 __ptext12                                text12       00182
-__ptext13                                text13       0057D
+__ptext13                                text13       0057A
 __ptext14                                text14       00878
 __ptext15                                text15       00838
 __ptext16                                text16       009E1
@@ -883,10 +884,10 @@ __ptext18                                text18       00B54
 __ptext19                                text19       00A0E
 __ptext2                                 text2        00858
 __ptext20                                text20       00AB9
-__ptext21                                text21       00626
+__ptext21                                text21       00623
 __ptext22                                text22       00BAF
 __ptext23                                text23       00D6D
-__ptext24                                text24       00767
+__ptext24                                text24       00764
 __ptext25                                text25       002A6
 __ptext26                                text26       00C0B
 __ptext27                                text27       00E6E
@@ -894,22 +895,22 @@ __ptext28                                text28       0002C
 __ptext29                                text29       00B04
 __ptext3                                 text3        009B6
 __ptext30                                text30       0098B
-__ptext31                                text31       00801
+__ptext31                                text31       017DB
 __ptext32                                text32       008E7
-__ptext33                                text33       017D9
+__ptext33                                text33       00804
 __ptext34                                text34       008BF
-__ptext35                                text35       006C8
+__ptext35                                text35       006C5
 __ptext36                                text36       0081A
 __ptext37                                text37       00EF1
 __ptext38                                text38       0089A
 __ptext39                                text39       00A76
-__ptext4                                 text4        007FC
+__ptext4                                 text4        00801
 __ptext40                                text40       00A3C
 __ptext41                                text41       00423
 __ptext42                                text42       00C75
 __ptext43                                text43       00CEF
 __ptext44                                text44       00DEB
-__ptext5                                 text5        007F1
+__ptext5                                 text5        0080F
 __ptext6                                 text6        004D1
 __ptext7                                 text7        00961
 __ptext8                                 text8        00F78
@@ -925,8 +926,8 @@ _ep_data_out                             bssBANK3     001A8
 _hid_rpt01                               stringtext6  01075
 _idle_rate                               bssBANK3     001B9
 _inPipes                                 bssBANK0     00065
-_init_alcohol                            text4        007FC
-_main                                    maintext     0080A
+_init_alcohol                            text4        00801
+_main                                    maintext     007EE
 _memcpy                                  text19       00A0E
 _memset                                  text25       002A6
 _outPipes                                bssBANK2     00160
@@ -943,7 +944,7 @@ btemp                                    (abs)        0007E
 check_alcohol@i                          cstackBANK1  000E3
 check_alcohol@max                        cstackBANK1  000E1
 check_alcohol@ret                        cstackBANK1  000E5
-clear_ram0                               clrtext      00804
+clear_ram0                               clrtext      017DE
 end_of_initialization                    cinit        00028
 i1LED_Off@led                            cstackCOMMON 00072
 i1LED_On@led                             cstackCOMMON 00072
@@ -956,13 +957,13 @@ i1USBTransferOnePacket@dir               cstackCOMMON 00070
 i1USBTransferOnePacket@ep                cstackCOMMON 00078
 i1USBTransferOnePacket@handle            cstackCOMMON 00079
 i1USBTransferOnePacket@len               cstackCOMMON 00073
-i1_LED_Init                              text33       017D9
+i1_LED_Init                              text33       00804
 i1_LED_Off                               text32       008E7
 i1_LED_On                                text34       008BF
 i1_SYSTEM_Initialize                     text30       0098B
-i1_USBDeviceInit                         text13       0057D
+i1_USBDeviceInit                         text13       0057A
 i1_USBTransferOnePacket                  text37       00EF1
-i1_init_alcohol                          text31       00801
+i1_init_alcohol                          text31       017DB
 int$flags                                (abs)        0007E
 intlevel0                                functab      00000
 intlevel1                                functab      00000
@@ -991,12 +992,12 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 usb_device_hid.c
-		_USBCheckHIDRequest		CODE           	06C8	0000	159
+		_USBCheckHIDRequest		CODE           	06C5	0000	159
 
 usb_device_hid.c estimated size: 159
 
 alcohol_drive.c
-		_init_alcohol  		CODE           	07FC	0000	3
+		_init_alcohol  		CODE           	0801	0000	3
 		_check_alcohol 		CODE           	0961	0000	42
 
 alcohol_drive.c estimated size: 45
@@ -1007,20 +1008,20 @@ C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\memcpy.c
 C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\memcpy.c estimated size: 46
 
 app_device_custom_hid.c
-		_APP_DeviceCustomHIDTasks		CODE           	04D1	0000	172
+		_APP_DeviceCustomHIDTasks		CODE           	04D1	0000	169
 		_APP_DeviceCustomHIDInitialize		CODE           	081A	0000	30
 
-app_device_custom_hid.c estimated size: 202
+app_device_custom_hid.c estimated size: 199
 
 shared
 		_configDescriptor1		STRCODE        	102A	0000	41
 		_USB_CD_Ptr    		STRCODE        	181C	0000	2
 		_sd001         		STRCODE        	1053	0000	34
 		_sd002         		STRCODE        	1000	0000	42
-		i1_init_alcohol		CODE           	0801	0000	3
-		i1_USBDeviceInit		CODE           	057D	0000	169
+		i1_init_alcohol		CODE           	17DB	0000	3
+		i1_USBDeviceInit		CODE           	057A	0000	169
 		__initialization		CODE           	000D	0000	27
-		i1_LED_Init    		CODE           	17D9	0000	11
+		i1_LED_Init    		CODE           	0804	0000	11
 		_device_dsc    		STRCODE        	1800	0000	18
 		i1_LED_On      		CODE           	08BF	0000	40
 		i1_LED_Off     		CODE           	08E7	0000	40
@@ -1033,7 +1034,7 @@ shared
 shared estimated size: 644
 
 leds.c
-		_LED_Init      		CODE           	07F1	0000	11
+		_LED_Init      		CODE           	080F	0000	11
 		_LED_Off       		CODE           	090F	0000	41
 		_LED_On        		CODE           	0938	0000	41
 
@@ -1049,9 +1050,9 @@ usb_device.c
 		_USBCtrlEPAllowStatusStage		CODE           	0C75	0000	122
 		_USBCtrlTrfSetupHandler		CODE           	0AB9	0000	75
 		_USBCtrlTrfOutHandler		CODE           	0A3C	0000	58
-		_USBCtrlEPServiceComplete		CODE           	0626	0000	162
+		_USBCtrlEPServiceComplete		CODE           	0623	0000	162
 		_USBSuspend    		CODE           	0838	0000	32
-		_USBStdSetCfgHandler		CODE           	0767	0000	138
+		_USBStdSetCfgHandler		CODE           	0764	0000	138
 		_USBStdGetStatusHandler		CODE           	0C0B	0000	106
 		_USBWakeFromSuspend		CODE           	0878	0000	34
 		_USBCtrlTrfRxService		CODE           	0423	0000	174
@@ -1078,7 +1079,7 @@ C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\memset.c
 C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\memset.c estimated size: 202
 
 main.c
-		_main          		CODE           	080A	0000	16
+		_main          		CODE           	07EE	0000	16
 
 main.c estimated size: 16
 
