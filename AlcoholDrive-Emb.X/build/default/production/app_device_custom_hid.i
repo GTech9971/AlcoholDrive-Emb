@@ -5024,17 +5024,22 @@ typedef enum{
 
     START_SCANNING = 0x80,
 
-    STOP_SCANNING = 0x70
+    STOP_SCANNING = 0x70,
+
+    READING_ALCOHOL_VALUE = 0x60
 } ALCOHOL_DRIVE_COMMANDS;
 
 
 void init_alcohol();
 
 
+void start_alcohol();
 
 
 
-_Bool check_alcohol();
+
+
+unsigned short check_alcohol();
 # 9 "app_device_custom_hid.c" 2
 
 # 1 "./leds.h" 1
@@ -5114,29 +5119,35 @@ void APP_DeviceCustomHIDTasks()
             case START_SCANNING:
                 if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
                 {
-
-                    LED_Off(LED_NG);
-                    LED_Off(LED_OK);
-                    LED_Off(LED_SCANNING);
-
                     LED_On(LED_SCANNING);
-                    _Bool result = check_alcohol();
-
-                    if(result){
-                        ToSendDataBuffer[0] = ALCOHOL_OK;
-                        LED_On(LED_OK);
-                    }else{
-                        ToSendDataBuffer[0] = ALCOHOL_NG;
-                        LED_On(LED_NG);
-                    }
-
-
-                    USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
+# 92 "app_device_custom_hid.c"
+                    start_alcohol();
                 }
                 break;
             case STOP_SCANNING:
                 if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
                 {
+
+                    LED_Off(LED_NG);
+                    LED_Off(LED_OK);
+                    LED_Off(LED_SCANNING);
+                }
+                break;
+            case READING_ALCOHOL_VALUE:
+                if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
+                {
+                    for(uint8_t i = 0; i < 64; i+=2){
+                        unsigned short value = check_alcohol();
+
+                        uint8_t head_dat = value >> 8;
+                        uint8_t tail_dat = value & 0x00FF;
+
+                        ToSendDataBuffer[i] = head_dat;
+                        ToSendDataBuffer[i + 1] = tail_dat;
+                    }
+
+
+                    USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
                 }
                 break;
         }

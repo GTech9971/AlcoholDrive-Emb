@@ -4004,17 +4004,22 @@ typedef enum{
 
     START_SCANNING = 0x80,
 
-    STOP_SCANNING = 0x70
+    STOP_SCANNING = 0x70,
+
+    READING_ALCOHOL_VALUE = 0x60
 } ALCOHOL_DRIVE_COMMANDS;
 
 
 void init_alcohol();
 
 
+void start_alcohol();
 
 
 
-_Bool check_alcohol();
+
+
+unsigned short check_alcohol();
 # 1 "alcohol_drive.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\stdint.h" 1 3
@@ -4113,21 +4118,29 @@ typedef uint32_t uint_fast32_t;
 
 void init_alcohol(){
     TRISAbits.TRISA5 = 1;
+    TRISAbits.TRISA4 = 1;
+
+    ADCON0 = 0x00;
+    ADCON1 = 0x80;
 }
 
 
 
 
 
-_Bool check_alcohol(){
-    _Bool ret = 1;
-    uint16_t max = 300;
-    for(uint16_t i = 0; i < max; i++){
+void start_alcohol(){
+    ADCON0 = 0x09;
+    _delay((unsigned long)((20)*(48000000/4000000.0)));
+}
 
-        if(PORTAbits.RA5 == 0){
-            ret = 0;
-        }
-        _delay((unsigned long)((10)*(48000000/4000.0)));
-    }
-    return ret;
+
+
+
+
+unsigned short check_alcohol(){
+# 43 "alcohol_drive.c"
+    ADCON0bits.GO = 1;
+    while(ADCON0bits.GO);
+    unsigned short value = ADRESL + ( ADRESH * 256);
+    return value;
 }

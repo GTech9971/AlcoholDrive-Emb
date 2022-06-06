@@ -93,7 +93,7 @@ void SYSTEM_Initialize( SYSTEM_STATE state )
                 OSCCON = 0xFC;  //HFINTOSC @ 16MHz, 3X PLL, PLL enabled
                 ACTCON = 0x90;  //Active clock tuning enabled for USB
             #endif
-            ANSELA = 0x00;
+            ANSELA = 0x10;
             ANSELC = 0x00;
             //LED初期化
             LED_Init();

@@ -78,29 +78,44 @@ void APP_DeviceCustomHIDTasks()
             case START_SCANNING:  //スキャン開始
                 if(!HIDTxHandleBusy(USBInHandle))
                 {    
-                    // LED停止
-                    LED_Off(LED_NG);
-                    LED_Off(LED_OK);
-                    LED_Off(LED_SCANNING);
-                    
                     LED_On(LED_SCANNING);
-                    bool result = check_alcohol();
-                    //アルコール未検知
-                    if(result){
-                        ToSendDataBuffer[0] = ALCOHOL_OK;
-                        LED_On(LED_OK);
-                    }else{ //1アルコール検知
-                        ToSendDataBuffer[0] = ALCOHOL_NG;
-                        LED_On(LED_NG);
-                    }
+//                    bool result = check_alcohol();
+//                    //アルコール未検知
+//                    if(result){
+//                        ToSendDataBuffer[0] = ALCOHOL_OK;
+//                        LED_On(LED_OK);
+//                    }else{ //1アルコール検知
+//                        ToSendDataBuffer[0] = ALCOHOL_NG;
+//                        LED_On(LED_NG);
+//                    }
                     
-                    //結果送信
-                    USBInHandle = HIDTxPacket(CUSTOM_DEVICE_HID_EP, (uint8_t*)&ToSendDataBuffer[0],64);
+                    start_alcohol();
                 }
                 break;
             case STOP_SCANNING://スキャン停止
                 if(!HIDTxHandleBusy(USBInHandle))
                 {
+                    // LED停止
+                    LED_Off(LED_NG);
+                    LED_Off(LED_OK);
+                    LED_Off(LED_SCANNING);
+                }
+                break;
+            case READING_ALCOHOL_VALUE: //アルコール値を読み取り
+                if(!HIDTxHandleBusy(USBInHandle))
+                {
+                    for(uint8_t i = 0; i < 64; i+=2){
+                        unsigned short value = check_alcohol();
+                        //16bitを上位8bit 下位8bitに分割
+                        uint8_t head_dat = value >> 8;
+                        uint8_t tail_dat = value & 0x00FF;
+                    
+                        ToSendDataBuffer[i] = head_dat;
+                        ToSendDataBuffer[i + 1] = tail_dat;
+                    }
+                    
+                    //結果送信
+                    USBInHandle = HIDTxPacket(CUSTOM_DEVICE_HID_EP, (uint8_t*)&ToSendDataBuffer[0],64);
                 }
                 break;
         }

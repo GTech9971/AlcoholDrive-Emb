@@ -4994,17 +4994,22 @@ typedef enum{
 
     START_SCANNING = 0x80,
 
-    STOP_SCANNING = 0x70
+    STOP_SCANNING = 0x70,
+
+    READING_ALCOHOL_VALUE = 0x60
 } ALCOHOL_DRIVE_COMMANDS;
 
 
 void init_alcohol();
 
 
+void start_alcohol();
 
 
 
-_Bool check_alcohol();
+
+
+unsigned short check_alcohol();
 # 24 "system.c" 2
 
 
@@ -5044,7 +5049,7 @@ void SYSTEM_Initialize( SYSTEM_STATE state )
                 OSCCON = 0xFC;
                 ACTCON = 0x90;
 
-            ANSELA = 0x00;
+            ANSELA = 0x10;
             ANSELC = 0x00;
 
             LED_Init();

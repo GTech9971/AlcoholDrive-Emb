@@ -10,21 +10,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1016
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1016: extern volatile TRISAbits_t TRISAbits __attribute__((address(0x08C)));
 [v _TRISAbits `VS62 ~T0 @X0 0 e@140 ]
-"435
-[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 435:     struct {
-[s S34 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S34 . RA0 RA1 . RA3 RA4 RA5 ]
-"434
-[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 434: typedef union {
-[u S33 `S34 1 ]
-[n S33 . . ]
-"444
-[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 444: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x00C)));
-[v _PORTAbits `VS33 ~T0 @X0 0 e@12 ]
+"1678
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1678: extern volatile unsigned char ADCON0 __attribute__((address(0x09D)));
+[v _ADCON0 `Vuc ~T0 @X0 0 e@157 ]
+"1758
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1758: extern volatile unsigned char ADCON1 __attribute__((address(0x09E)));
+[v _ADCON1 `Vuc ~T0 @X0 0 e@158 ]
 [v F2298 `(v ~T0 @X0 1 tf1`ul ]
 "92 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\pic.h
 [v __delay `JF2298 ~T0 @X0 0 e ]
 [p i __delay ]
+"1684 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1684:     struct {
+[s S93 :1 `uc 1 :1 `uc 1 :5 `uc 1 ]
+[n S93 . ADON GO_nDONE CHS ]
+"1689
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1689:     struct {
+[s S94 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S94 . . ADGO CHS0 CHS1 CHS2 CHS3 CHS4 ]
+"1698
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1698:     struct {
+[s S95 :1 `uc 1 :1 `uc 1 ]
+[n S95 . . GO ]
+"1683
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1683: typedef union {
+[u S92 `S93 1 `S94 1 `S95 1 ]
+[n S92 . . . . ]
+"1703
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1703: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0x09D)));
+[v _ADCON0bits `VS92 ~T0 @X0 0 e@157 ]
+"1638
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1638: extern volatile unsigned char ADRESL __attribute__((address(0x09B)));
+[v _ADRESL `Vuc ~T0 @X0 0 e@155 ]
+"1658
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1658: extern volatile unsigned char ADRESH __attribute__((address(0x09C)));
+[v _ADRESH `Vuc ~T0 @X0 0 e@156 ]
 "54 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -467,58 +487,59 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;alcohol_drive.c: 11:     TRISAbits.TRISA5 = 1;
 [e = . . _TRISAbits 0 2 -> -> 1 `i `uc ]
 "12
-[; ;alcohol_drive.c: 12: }
+[; ;alcohol_drive.c: 12:     TRISAbits.TRISA4 = 1;
+[e = . . _TRISAbits 0 1 -> -> 1 `i `uc ]
+"14
+[; ;alcohol_drive.c: 14:     ADCON0 = 0x00;
+[e = _ADCON0 -> -> 0 `i `uc ]
+"15
+[; ;alcohol_drive.c: 15:     ADCON1 = 0x80;
+[e = _ADCON1 -> -> 128 `i `uc ]
+"16
+[; ;alcohol_drive.c: 16: }
 [e :UE 327 ]
 }
-"18
-[; ;alcohol_drive.c: 18: _Bool check_alcohol(){
-[v _check_alcohol `(a ~T0 @X0 1 ef ]
+"22
+[; ;alcohol_drive.c: 22: void start_alcohol(){
+[v _start_alcohol `(v ~T0 @X0 1 ef ]
+{
+[e :U _start_alcohol ]
+[f ]
+"23
+[; ;alcohol_drive.c: 23:     ADCON0 = 0x09;
+[e = _ADCON0 -> -> 9 `i `uc ]
+"24
+[; ;alcohol_drive.c: 24:     _delay((unsigned long)((20)*(48000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 48000000 `l `d .4000000.0 `ul ]
+"25
+[; ;alcohol_drive.c: 25: }
+[e :UE 328 ]
+}
+"31
+[; ;alcohol_drive.c: 31: unsigned short check_alcohol(){
+[v _check_alcohol `(us ~T0 @X0 1 ef ]
 {
 [e :U _check_alcohol ]
 [f ]
-"19
-[; ;alcohol_drive.c: 19:     _Bool ret = 1;
-[v _ret `a ~T0 @X0 1 a ]
-[e = _ret -> -> 1 `i `a ]
-"20
-[; ;alcohol_drive.c: 20:     uint16_t max = 300;
-[v _max `us ~T0 @X0 1 a ]
-[e = _max -> -> 300 `i `us ]
-"21
-[; ;alcohol_drive.c: 21:     for(uint16_t i = 0; i < max; i++){
-{
-[v _i `us ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `us ]
-[e $U 332  ]
-[e :U 329 ]
-{
-"23
-[; ;alcohol_drive.c: 23:         if(PORTAbits.RA5 == 0){
-[e $ ! == -> . . _PORTAbits 0 5 `i -> 0 `i 333  ]
-{
-"24
-[; ;alcohol_drive.c: 24:             ret = 0;
-[e = _ret -> -> 0 `i `a ]
-"25
-[; ;alcohol_drive.c: 25:         }
-}
-[e :U 333 ]
-"26
-[; ;alcohol_drive.c: 26:         _delay((unsigned long)((10)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"27
-[; ;alcohol_drive.c: 27:     }
-}
-[e ++ _i -> -> 1 `i `us ]
-[e :U 332 ]
-[e $ < -> _i `ui -> _max `ui 329  ]
+"43
+[; ;alcohol_drive.c: 43:     ADCON0bits.GO = 1;
+[e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
+"44
+[; ;alcohol_drive.c: 44:     while(ADCON0bits.GO);
+[e $U 330  ]
+[e :U 331 ]
 [e :U 330 ]
-}
-"28
-[; ;alcohol_drive.c: 28:     return ret;
-[e ) _ret ]
-[e $UE 328  ]
-"29
-[; ;alcohol_drive.c: 29: }
-[e :UE 328 ]
+[e $ != -> . . _ADCON0bits 2 1 `i -> 0 `i 331  ]
+[e :U 332 ]
+"45
+[; ;alcohol_drive.c: 45:     unsigned short value = ADRESL + ( ADRESH * 256);
+[v _value `us ~T0 @X0 1 a ]
+[e = _value -> + -> _ADRESL `i * -> _ADRESH `i -> 256 `i `us ]
+"46
+[; ;alcohol_drive.c: 46:     return value;
+[e ) _value ]
+[e $UE 329  ]
+"47
+[; ;alcohol_drive.c: 47: }
+[e :UE 329 ]
 }

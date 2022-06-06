@@ -9,14 +9,14 @@
 ### Memory Usage ###
  Intel Hex-file ranges:
   0h - 3h		(dist/default/production\AlcoholDrive-Emb.X.production.hex)
-  8h - FFBh		(dist/default/production\AlcoholDrive-Emb.X.production.hex)
+  8h - FF7h		(dist/default/production\AlcoholDrive-Emb.X.production.hex)
   1002h - 2123h		(dist/default/production\AlcoholDrive-Emb.X.production.hex)
-  2FB6h - 303Bh		(dist/default/production\AlcoholDrive-Emb.X.production.hex)
+  2F48h - 303Bh		(dist/default/production\AlcoholDrive-Emb.X.production.hex)
   1000Eh - 10011h		(dist/default/production\AlcoholDrive-Emb.X.production.hex)
  Unused ranges:
   4h - 7h
-  FFCh - 1001h
-  2124h - 2FB5h
+  FF8h - 1001h
+  2124h - 2F47h
   303Ch - 1000Dh
 
 ### Hex Memory Map ###
@@ -281,7 +281,7 @@
 00000FC0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000FD0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000FE0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00000FF0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- --
+00000FF0 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
 00001000 | -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001010 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001020 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -558,7 +558,14 @@
 00002110 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002120 | H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
-00002FB0 | -- -- -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002F40 | -- -- -- -- -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1
+00002F50 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002F60 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002F70 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002F80 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002F90 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002FA0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002FB0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002FC0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002FD0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002FE0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1

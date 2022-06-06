@@ -18,8 +18,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "21 ./leds.h
 [; ;./leds.h: 21: void LED_Init();
 [v _LED_Init `(v ~T0 @X0 0 e? ]
-"20 ./alcohol_drive.h
-[; ;./alcohol_drive.h: 20: void init_alcohol();
+"22 ./alcohol_drive.h
+[; ;./alcohol_drive.h: 22: void init_alcohol();
 [v _init_alcohol `(v ~T0 @X0 0 e? ]
 "105 system.c
 [; ;system.c: 105:             LED_Off(LED_CONNECT);
@@ -530,8 +530,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;system.c: 94:                 ACTCON = 0x90;
 [e = _ACTCON -> -> 144 `i `uc ]
 "96
-[; ;system.c: 96:             ANSELA = 0x00;
-[e = _ANSELA -> -> 0 `i `uc ]
+[; ;system.c: 96:             ANSELA = 0x10;
+[e = _ANSELA -> -> 16 `i `uc ]
 "97
 [; ;system.c: 97:             ANSELC = 0x00;
 [e = _ANSELC -> -> 0 `i `uc ]
