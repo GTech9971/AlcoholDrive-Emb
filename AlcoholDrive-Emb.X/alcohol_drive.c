@@ -39,7 +39,7 @@ unsigned short check_alcohol(){
 //        __delay_ms(10);
 //    }
 //    return ret;
-    
+    start_alcohol();
     ADCON0bits.GO = 1;
     while(ADCON0bits.GO);
     unsigned short value = ADRESL + ( ADRESH * 256);

@@ -521,6 +521,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _check_alcohol ]
 [f ]
+"42
+[; ;alcohol_drive.c: 42:     start_alcohol();
+[e ( _start_alcohol ..  ]
 "43
 [; ;alcohol_drive.c: 43:     ADCON0bits.GO = 1;
 [e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]

@@ -4138,7 +4138,8 @@ void start_alcohol(){
 
 
 unsigned short check_alcohol(){
-# 43 "alcohol_drive.c"
+# 42 "alcohol_drive.c"
+    start_alcohol();
     ADCON0bits.GO = 1;
     while(ADCON0bits.GO);
     unsigned short value = ADRESL + ( ADRESH * 256);
