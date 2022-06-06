@@ -1,14 +1,14 @@
-Microchip MPLAB XC8 Compiler V2.35
+Microchip MPLAB XC8 Compiler V2.36
 
 Linker command line:
 
--W-3 --edf=C:\Program Files\Microchip\xc8\v2.35\pic\dat\en_msgs.txt -cn \
+-W-3 --edf=C:\Program Files\Microchip\xc8\v2.36\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\AlcoholDrive-Emb.X.production.sym \
   --cmf=dist/default/production\AlcoholDrive-Emb.X.production.cmf -z \
-  -Q16F1459 -oC:\Users\georg\AppData\Local\Temp\xcAsqho.4 \
+  -Q16F1459 -oC:\Users\georg\AppData\Local\Temp\xcAs544.4 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/AlcoholDrive-Emb.X.production.map \
-  --md=C:\Users\georg\AppData\Local\Temp\xcAsqho.dat -E1 -ver=XC8 Compiler \
+  --md=C:\Users\georg\AppData\Local\Temp\xcAs544.dat -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
   -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh \
   -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh -ABANK2=0120h-016Fh \
@@ -32,7 +32,7 @@ Linker command line:
   -AIDLOC=08000h-08003h -DIDLOC=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k \
-  C:\Users\georg\AppData\Local\Temp\xcAsqho.o \
+  C:\Users\georg\AppData\Local\Temp\xcAs544.o \
   dist/default/production\AlcoholDrive-Emb.X.production.o 
 
 Object code version is 3.11
@@ -42,7 +42,7 @@ Machine type is 16F1459
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\georg\AppData\Local\Temp\xcAsqho.o
+C:\Users\georg\AppData\Local\Temp\xcAs544.o
                 end_init                              B        B        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2        0       4
@@ -1021,10 +1021,10 @@ alcohol_drive.c
 
 alcohol_drive.c estimated size: 29
 
-C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\memcpy.c
-		_memcpy        		CODE           	09DE	0000	46
+C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\memset.c
+		_memset        		CODE           	0389	0000	202
 
-C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\memcpy.c estimated size: 46
+C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\memset.c estimated size: 202
 
 app_device_custom_hid.c
 		_APP_DeviceCustomHIDTasks		CODE           	02A9	0000	224
@@ -1092,10 +1092,10 @@ usb_events.c
 
 usb_events.c estimated size: 80
 
-C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\memset.c
-		_memset        		CODE           	0389	0000	202
+C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\memcpy.c
+		_memcpy        		CODE           	09DE	0000	46
 
-C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\memset.c estimated size: 202
+C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\memcpy.c estimated size: 46
 
 main.c
 		_main          		CODE           	0801	0000	16

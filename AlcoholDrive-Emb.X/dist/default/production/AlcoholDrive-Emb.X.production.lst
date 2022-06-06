@@ -1,9 +1,9 @@
 
 
-Microchip MPLAB XC8 Assembler V2.35 build 20211206165544 
-                                                                                               Mon Jun 06 10:01:23 2022
+Microchip MPLAB XC8 Assembler V2.36 build 20220127204148 
+                                                                                               Mon Jun 06 10:50:05 2022
 
-Microchip MPLAB XC8 C Compiler v2.35 (Free license) build 20211206165544 Og1 
+Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1 
      1                           	processor	16F1459
      2                           	pagewidth 120
      3                           	opt	flic
@@ -5681,7 +5681,7 @@ Microchip MPLAB XC8 C Compiler v2.35 (Free license) build 20211206165544 Og1
   5524  09DE                     __ptext20:	
   5525 ;; *************** function _memcpy *****************
   5526 ;; Defined at:
-  5527 ;;		line 4 in file "C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\memcpy.c"
+  5527 ;;		line 4 in file "C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\memcpy.c"
   5528 ;; Parameters:    Size  Location     Type
   5529 ;;  d1              1    wreg     PTR void 
   5530 ;;		 -> SetupPkt(8), 
@@ -6982,7 +6982,7 @@ Microchip MPLAB XC8 C Compiler v2.35 (Free license) build 20211206165544 Og1
   6774  0389                     __ptext26:	
   6775 ;; *************** function _memset *****************
   6776 ;; Defined at:
-  6777 ;;		line 4 in file "C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\memset.c"
+  6777 ;;		line 4 in file "C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\memset.c"
   6778 ;; Parameters:    Size  Location     Type
   6779 ;;  dest            2    0[COMMON] PTR void 
   6780 ;;		 -> USBAlternateInterface(1), BDT(32), 
@@ -11891,8 +11891,8 @@ BITSFR31             0      0       0      32        0.0%
 SFR31                0      0       0      32        0.0%
 
 
-Microchip Technology PIC Macro Assembler V2.35 build 20211206165544 
-Symbol Table                                                                                   Mon Jun 06 10:01:23 2022
+Microchip Technology PIC Macro Assembler V2.36 build 20220127204148 
+Symbol Table                                                                                   Mon Jun 06 10:50:05 2022
 
                              _USB_SD_Ptr 1812                                       l30 02B1  
                                      l31 0388                                       l64 080B  
