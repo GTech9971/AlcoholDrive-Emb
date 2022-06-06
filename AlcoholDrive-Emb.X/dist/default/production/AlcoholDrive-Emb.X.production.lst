@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.36 build 20220127204148 
-                                                                                               Mon Jun 06 10:50:05 2022
+                                                                                               Mon Jun 06 21:42:22 2022
 
 Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1 
      1                           	processor	16F1459
@@ -3536,8 +3536,8 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3463                           ; Regs used in _start_alcohol: [wreg]
   3464                           
   3465                           
-  3466                           ;alcohol_drive.c: 23:     ADCON0 = 0x09;
-  3467  17B1  3009               	movlw	9
+  3466                           ;alcohol_drive.c: 23:     ADCON0 = 0x0D;
+  3467  17B1  300D               	movlw	13
   3468  17B2  0021               	movlb	1	; select bank1
   3469  17B3  009D               	movwf	29	;volatile
   3470                           
@@ -11892,7 +11892,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.36 build 20220127204148 
-Symbol Table                                                                                   Mon Jun 06 10:50:05 2022
+Symbol Table                                                                                   Mon Jun 06 21:42:22 2022
 
                              _USB_SD_Ptr 1812                                       l30 02B1  
                                      l31 0388                                       l64 080B  

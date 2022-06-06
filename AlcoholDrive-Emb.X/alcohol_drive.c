@@ -20,7 +20,7 @@ void init_alcohol(){
  * @return 
  */
 void start_alcohol(){
-    ADCON0 = 0x09;
+    ADCON0 = 0x0D;
     __delay_us(20);
 }
 

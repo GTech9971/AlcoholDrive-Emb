@@ -4129,7 +4129,7 @@ void init_alcohol(){
 
 
 void start_alcohol(){
-    ADCON0 = 0x09;
+    ADCON0 = 0x0D;
     _delay((unsigned long)((20)*(48000000/4000000.0)));
 }
 

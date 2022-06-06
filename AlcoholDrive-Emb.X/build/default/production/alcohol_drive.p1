@@ -506,8 +506,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _start_alcohol ]
 [f ]
 "23
-[; ;alcohol_drive.c: 23:     ADCON0 = 0x09;
-[e = _ADCON0 -> -> 9 `i `uc ]
+[; ;alcohol_drive.c: 23:     ADCON0 = 0x0D;
+[e = _ADCON0 -> -> 13 `i `uc ]
 "24
 [; ;alcohol_drive.c: 24:     _delay((unsigned long)((20)*(48000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 20 `i `d / -> -> 48000000 `l `d .4000000.0 `ul ]
