@@ -4108,20 +4108,15 @@ typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 144 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 2 3
 # 2 "alcohol_drive.c" 2
-
-
-
-
-
-
-
-
+# 11 "alcohol_drive.c"
 void init_alcohol(){
     TRISAbits.TRISA5 = 1;
     TRISAbits.TRISA4 = 1;
-
+    ANSELAbits.ANSA4 = 1;
     ADCON0 = 0x00;
     ADCON1 = 0x80;
+
+    start_alcohol();
 }
 
 
@@ -4130,7 +4125,7 @@ void init_alcohol(){
 
 void start_alcohol(){
     ADCON0 = 0x0D;
-    _delay((unsigned long)((20)*(48000000/4000000.0)));
+    _delay((unsigned long)((5)*(48000000/4000.0)));
 }
 
 
@@ -4138,8 +4133,8 @@ void start_alcohol(){
 
 
 unsigned short check_alcohol(){
-# 42 "alcohol_drive.c"
-    start_alcohol();
+# 45 "alcohol_drive.c"
+    _delay((unsigned long)((5)*(48000000/4000.0)));
     ADCON0bits.GO = 1;
     while(ADCON0bits.GO);
     unsigned short value = ADRESL + ( ADRESH * 256);

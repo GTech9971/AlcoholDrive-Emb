@@ -10,12 +10,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1016
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1016: extern volatile TRISAbits_t TRISAbits __attribute__((address(0x08C)));
 [v _TRISAbits `VS62 ~T0 @X0 0 e@140 ]
+"2525
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 2525:     struct {
+[s S134 :4 `uc 1 :1 `uc 1 ]
+[n S134 . . ANSA4 ]
+"2529
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 2529:     struct {
+[s S135 :6 `uc 1 ]
+[n S135 . ANSELA ]
+"2524
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 2524: typedef union {
+[u S133 `S134 1 `S135 1 ]
+[n S133 . . . ]
+"2533
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 2533: extern volatile ANSELAbits_t ANSELAbits __attribute__((address(0x18C)));
+[v _ANSELAbits `VS133 ~T0 @X0 0 e@396 ]
 "1678
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1678: extern volatile unsigned char ADCON0 __attribute__((address(0x09D)));
 [v _ADCON0 `Vuc ~T0 @X0 0 e@157 ]
 "1758
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1758: extern volatile unsigned char ADCON1 __attribute__((address(0x09E)));
 [v _ADCON1 `Vuc ~T0 @X0 0 e@158 ]
+"25 ./alcohol_drive.h
+[; ;./alcohol_drive.h: 25: void start_alcohol();
+[v _start_alcohol `(v ~T0 @X0 0 e? ]
 [v F2298 `(v ~T0 @X0 1 tf1`ul ]
 "92 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\pic.h
 [v __delay `JF2298 ~T0 @X0 0 e ]
@@ -477,72 +495,78 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6106
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 6106: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"10 alcohol_drive.c
-[; ;alcohol_drive.c: 10: void init_alcohol(){
+"11 alcohol_drive.c
+[; ;alcohol_drive.c: 11: void init_alcohol(){
 [v _init_alcohol `(v ~T0 @X0 1 ef ]
 {
 [e :U _init_alcohol ]
 [f ]
-"11
-[; ;alcohol_drive.c: 11:     TRISAbits.TRISA5 = 1;
-[e = . . _TRISAbits 0 2 -> -> 1 `i `uc ]
 "12
-[; ;alcohol_drive.c: 12:     TRISAbits.TRISA4 = 1;
+[; ;alcohol_drive.c: 12:     TRISAbits.TRISA5 = 1;
+[e = . . _TRISAbits 0 2 -> -> 1 `i `uc ]
+"13
+[; ;alcohol_drive.c: 13:     TRISAbits.TRISA4 = 1;
 [e = . . _TRISAbits 0 1 -> -> 1 `i `uc ]
 "14
-[; ;alcohol_drive.c: 14:     ADCON0 = 0x00;
-[e = _ADCON0 -> -> 0 `i `uc ]
+[; ;alcohol_drive.c: 14:     ANSELAbits.ANSA4 = 1;
+[e = . . _ANSELAbits 0 1 -> -> 1 `i `uc ]
 "15
-[; ;alcohol_drive.c: 15:     ADCON1 = 0x80;
-[e = _ADCON1 -> -> 128 `i `uc ]
+[; ;alcohol_drive.c: 15:     ADCON0 = 0x00;
+[e = _ADCON0 -> -> 0 `i `uc ]
 "16
-[; ;alcohol_drive.c: 16: }
+[; ;alcohol_drive.c: 16:     ADCON1 = 0x80;
+[e = _ADCON1 -> -> 128 `i `uc ]
+"18
+[; ;alcohol_drive.c: 18:     start_alcohol();
+[e ( _start_alcohol ..  ]
+"19
+[; ;alcohol_drive.c: 19: }
 [e :UE 327 ]
 }
-"22
-[; ;alcohol_drive.c: 22: void start_alcohol(){
+"25
+[; ;alcohol_drive.c: 25: void start_alcohol(){
 [v _start_alcohol `(v ~T0 @X0 1 ef ]
 {
 [e :U _start_alcohol ]
 [f ]
-"23
-[; ;alcohol_drive.c: 23:     ADCON0 = 0x0D;
+"26
+[; ;alcohol_drive.c: 26:     ADCON0 = 0x0D;
 [e = _ADCON0 -> -> 13 `i `uc ]
-"24
-[; ;alcohol_drive.c: 24:     _delay((unsigned long)((20)*(48000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 48000000 `l `d .4000000.0 `ul ]
-"25
-[; ;alcohol_drive.c: 25: }
+"27
+[; ;alcohol_drive.c: 27:     _delay((unsigned long)((5)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+"28
+[; ;alcohol_drive.c: 28: }
 [e :UE 328 ]
 }
-"31
-[; ;alcohol_drive.c: 31: unsigned short check_alcohol(){
+"34
+[; ;alcohol_drive.c: 34: unsigned short check_alcohol(){
 [v _check_alcohol `(us ~T0 @X0 1 ef ]
 {
 [e :U _check_alcohol ]
 [f ]
-"42
-[; ;alcohol_drive.c: 42:     start_alcohol();
-[e ( _start_alcohol ..  ]
-"43
-[; ;alcohol_drive.c: 43:     ADCON0bits.GO = 1;
+"45
+[; ;alcohol_drive.c: 45:     _delay((unsigned long)((5)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+"46
+[; ;alcohol_drive.c: 46:     ADCON0bits.GO = 1;
 [e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
-"44
-[; ;alcohol_drive.c: 44:     while(ADCON0bits.GO);
+"47
+[; ;alcohol_drive.c: 47:     while(ADCON0bits.GO);
 [e $U 330  ]
 [e :U 331 ]
 [e :U 330 ]
 [e $ != -> . . _ADCON0bits 2 1 `i -> 0 `i 331  ]
 [e :U 332 ]
-"45
-[; ;alcohol_drive.c: 45:     unsigned short value = ADRESL + ( ADRESH * 256);
+"48
+[; ;alcohol_drive.c: 48:     unsigned short value = ADRESL + ( ADRESH * 256);
 [v _value `us ~T0 @X0 1 a ]
 [e = _value -> + -> _ADRESL `i * -> _ADRESH `i -> 256 `i `us ]
-"46
-[; ;alcohol_drive.c: 46:     return value;
+"49
+[; ;alcohol_drive.c: 49:     return value;
 [e ) _value ]
 [e $UE 329  ]
-"47
-[; ;alcohol_drive.c: 47: }
+"50
+[; ;alcohol_drive.c: 50: }
 [e :UE 329 ]
 }

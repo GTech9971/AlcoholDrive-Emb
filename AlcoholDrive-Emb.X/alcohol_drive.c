@@ -1,5 +1,6 @@
 #include "alcohol_drive.h"
 #include <stdint.h>
+#include <pic16f1459.h>
 
 #define _XTAL_FREQ 48000000
 
@@ -10,9 +11,11 @@
 void init_alcohol(){
     TRISAbits.TRISA5 = PIN_INPUT;
     TRISAbits.TRISA4 = PIN_INPUT;
-    
+    ANSELAbits.ANSA4 = PIN_INPUT;
     ADCON0 = 0x00;
     ADCON1 = 0x80;
+    
+    start_alcohol();
 }
 
 /**
@@ -21,7 +24,7 @@ void init_alcohol(){
  */
 void start_alcohol(){
     ADCON0 = 0x0D;
-    __delay_us(20);
+    __delay_ms(5);
 }
 
 /**
@@ -39,7 +42,7 @@ unsigned short check_alcohol(){
 //        __delay_ms(10);
 //    }
 //    return ret;
-    start_alcohol();
+    __delay_ms(5);
     ADCON0bits.GO = 1;
     while(ADCON0bits.GO);
     unsigned short value = ADRESL + ( ADRESH * 256);
