@@ -5,10 +5,10 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.36\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\AlcoholDrive-Emb.X.production.sym \
   --cmf=dist/default/production\AlcoholDrive-Emb.X.production.cmf -z \
-  -Q16F1459 -oC:\Users\georg\AppData\Local\Temp\xcAs8l4.4 \
+  -Q16F1459 -oC:\Users\georg\AppData\Local\Temp\xcAs1s4.4 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/AlcoholDrive-Emb.X.production.map \
-  --md=C:\Users\georg\AppData\Local\Temp\xcAs8l4.dat -E1 -ver=XC8 Compiler \
+  --md=C:\Users\georg\AppData\Local\Temp\xcAs1s4.dat -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
   -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh \
   -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh -ABANK2=0120h-016Fh \
@@ -32,7 +32,7 @@ Linker command line:
   -AIDLOC=08000h-08003h -DIDLOC=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k \
-  C:\Users\georg\AppData\Local\Temp\xcAs8l4.o \
+  C:\Users\georg\AppData\Local\Temp\xcAs1s4.o \
   dist/default/production\AlcoholDrive-Emb.X.production.o 
 
 Object code version is 3.11
@@ -42,7 +42,7 @@ Machine type is 16F1459
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\georg\AppData\Local\Temp\xcAs8l4.o
+C:\Users\georg\AppData\Local\Temp\xcAs1s4.o
                 end_init                              B        B        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2        0       4
@@ -61,10 +61,10 @@ dist/default/production\AlcoholDrive-Emb.X.production.o
                 text38                              811      811       1E     1022       0
                 text37                              6FE      6FE       9F        8       0
                 text36                              8B7      8B7       28     116E       0
-                text35                             1785     1785        B     2F0A       0
+                text35                             1788     1788        B     2F10       0
                 text34                              8DF      8DF       28     11BE       0
-                text33                             179B     179B        C     2F36       0
-                text32                             17B3     17B3        D     2F66       0
+                text33                             179E     179E        C     2F3C       0
+                text32                             17B6     17B6        D     2F6C       0
                 text31                              959      959       2C     12B2       0
                 text30                              AD4      AD4       50     15A8       0
                 text29                               2D       2D      156        8       0
@@ -87,11 +87,11 @@ dist/default/production\AlcoholDrive-Emb.X.production.o
                 text11                              907      907       29     120E       0
                 text10                              930      930       29     1260       0
                 text9                               EEE      EEE       88     1DDC       0
-                text8                              17CD     17CD       17     2F9A       0
+                text8                              17D0     17D0       14     2FA0       0
                 text7                               2A9      2A9       DD        8       0
-                text6                              1790     1790        B     2F20       0
-                text5                              17A7     17A7        C     2F4E       0
-                text4                              17C0     17C0        D     2F80       0
+                text6                              1793     1793        B     2F26       0
+                text5                              17AA     17AA        C     2F54       0
+                text4                              17C3     17C3        D     2F86       0
                 text3                               985      985       2C     130A       0
                 text2                               84F      84F       21     109E       0
                 text1                               450      450       B3        8       0
@@ -131,10 +131,10 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text38                              811      811       1E         0
                 text37                              6FE      6FE       9F         0
                 text36                              8B7      8B7       28         0
-                text35                             1785     1785        B         0
+                text35                             1788     1788        B         0
                 text34                              8DF      8DF       28         0
-                text33                             179B     179B        C         0
-                text32                             17B3     17B3        D         0
+                text33                             179E     179E        C         0
+                text32                             17B6     17B6        D         0
                 text31                              959      959       2C         0
                 text30                              AD4      AD4       50         0
                 text29                               2D       2D      156         0
@@ -157,11 +157,11 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text11                              907      907       29         0
                 text10                              930      930       29         0
                 text9                               EEE      EEE       88         0
-                text8                              17CD     17CD       17         0
+                text8                              17D0     17D0       14         0
                 text7                               2A9      2A9       DD         0
-                text6                              1790     1790        B         0
-                text5                              17A7     17A7        C         0
-                text4                              17C0     17C0        D         0
+                text6                              1793     1793        B         0
+                text5                              17AA     17AA        C         0
+                text4                              17C3     17C3        D         0
                 text3                               985      985       2C         0
                 text2                               84F      84F       21         0
                 text1                               450      450       B3         0
@@ -383,13 +383,13 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 text9                          000EEE  000088  000F76      1DDC       0  CODE        2
                 text25                         000F76  00008A  001000      1EEC       0  CODE        2
                 stringtext3                    001000  000092  001092      2000       0  STRCODE     2
-                text35                         001785  00000B  001790      2F0A       0  CODE        2
-                text6                          001790  00000B  00179B      2F20       0  CODE        2
-                text33                         00179B  00000C  0017A7      2F36       0  CODE        2
-                text5                          0017A7  00000C  0017B3      2F4E       0  CODE        2
-                text32                         0017B3  00000D  0017C0      2F66       0  CODE        2
-                text4                          0017C0  00000D  0017CD      2F80       0  CODE        2
-                text8                          0017CD  000017  0017E4      2F9A       0  CODE        2
+                text35                         001788  00000B  001793      2F10       0  CODE        2
+                text6                          001793  00000B  00179E      2F26       0  CODE        2
+                text33                         00179E  00000C  0017AA      2F3C       0  CODE        2
+                text5                          0017AA  00000C  0017B6      2F54       0  CODE        2
+                text32                         0017B6  00000D  0017C3      2F6C       0  CODE        2
+                text4                          0017C3  00000D  0017D0      2F86       0  CODE        2
+                text8                          0017D0  000014  0017E4      2FA0       0  CODE        2
                 text18                         0017E4  00001C  001800      2FC8       0  CODE        2
                 stringtext7                    001800  00001E  00181E      3000       0  STRCODE     2
 
@@ -410,15 +410,15 @@ UNUSED ADDRESS RANGES
         BIGRAM           02000-023EF             3F0           1
         CODE             00002-00003               2           2
                          007FF-00800               1
-                         01092-01784             6F3
+                         01092-01787             6F6
                          0181E-01FFF             7E2
         CONST            00002-00003               2           2
                          007FF-00800               1
-                         01092-01784             100
+                         01092-01787             100
                          0181E-01FFF             100
         ENTRY            00002-00003               2           2
                          007FF-00800               1
-                         01092-01784             100
+                         01092-01787             100
                          0181E-01FFF             100
         IDLOC            08000-08003               4           2
         RAM              001BE-001EF              32           1
@@ -465,11 +465,11 @@ UNUSED ADDRESS RANGES
         SFR9             00480-0049F              20           1
         STRCODE          00002-00003               2           2
                          007FF-00800               2
-                         01092-01784             6F3
+                         01092-01787             6F6
                          0181E-01FFF             7E2
         STRING           00002-00003               2           2
                          007FF-00800               1
-                         01092-01784             100
+                         01092-01787             100
                          0181E-01FFF             100
 
                                   Symbol Table
@@ -529,7 +529,7 @@ _BothEP0OutUOWNsSet                      bssBANK3     001B8
 _CtrlTrfData                             (abs)        00048
 _INTCONbits                              (abs)        0000B
 _LATCbits                                (abs)        0010E
-_LED_Init                                text6        01790
+_LED_Init                                text6        01793
 _LED_Off                                 text11       00907
 _LED_On                                  text10       00930
 _OSCCON                                  (abs)        00099
@@ -821,7 +821,7 @@ ___stackhi                               (abs)        00000
 ___stacklo                               (abs)        00000
 __end_of_APP_DeviceCustomHIDInitialize   text38       0082F
 __end_of_APP_DeviceCustomHIDTasks        text7        00386
-__end_of_LED_Init                        text6        0179B
+__end_of_LED_Init                        text6        0179E
 __end_of_LED_Off                         text11       00930
 __end_of_LED_On                          text10       00959
 __end_of_SYSTEM_Initialize               text3        009B1
@@ -859,22 +859,22 @@ __end_of_check_alcohol                   text8        017E4
 __end_of_configDescriptor1               stringtext4  01053
 __end_of_device_dsc                      stringtext7  01812
 __end_of_hid_rpt01                       stringtext6  01092
-__end_of_init_alcohol                    text4        017CD
+__end_of_init_alcohol                    text4        017D0
 __end_of_main                            maintext     00811
 __end_of_memcpy                          text20       00A0C
 __end_of_memset                          text26       00450
 __end_of_sd000                           stringtext8  0181C
 __end_of_sd001                           stringtext5  01075
 __end_of_sd002                           stringtext3  0102A
-__end_of_start_alcohol                   text5        017B3
-__end_ofi1_LED_Init                      text35       01790
+__end_of_start_alcohol                   text5        017B6
+__end_ofi1_LED_Init                      text35       01793
 __end_ofi1_LED_Off                       text34       00907
 __end_ofi1_LED_On                        text36       008DF
 __end_ofi1_SYSTEM_Initialize             text31       00985
 __end_ofi1_USBDeviceInit                 text14       0065B
 __end_ofi1_USBTransferOnePacket          text39       00EEE
-__end_ofi1_init_alcohol                  text32       017C0
-__end_ofi1_start_alcohol                 text33       017A7
+__end_ofi1_init_alcohol                  text32       017C3
+__end_ofi1_start_alcohol                 text33       017AA
 __initialization                         cinit        0000D
 __pbssBANK0                              bssBANK0     00065
 __pbssBANK1                              bssBANK1     000ED
@@ -918,15 +918,15 @@ __ptext29                                text29       0002D
 __ptext3                                 text3        00985
 __ptext30                                text30       00AD4
 __ptext31                                text31       00959
-__ptext32                                text32       017B3
-__ptext33                                text33       0179B
+__ptext32                                text32       017B6
+__ptext33                                text33       0179E
 __ptext34                                text34       008DF
-__ptext35                                text35       01785
+__ptext35                                text35       01788
 __ptext36                                text36       008B7
 __ptext37                                text37       006FE
 __ptext38                                text38       00811
 __ptext39                                text39       00E67
-__ptext4                                 text4        017C0
+__ptext4                                 text4        017C3
 __ptext40                                text40       00892
 __ptext41                                text41       00A46
 __ptext42                                text42       00A0C
@@ -934,13 +934,13 @@ __ptext43                                text43       00503
 __ptext44                                text44       00BE9
 __ptext45                                text45       00CE1
 __ptext46                                text46       00D61
-__ptext5                                 text5        017A7
-__ptext6                                 text6        01790
+__ptext5                                 text5        017AA
+__ptext6                                 text6        01793
 __ptext7                                 text7        002A9
-__ptext8                                 text8        017CD
+__ptext8                                 text8        017D0
 __ptext9                                 text9        00EEE
 _active_protocol                         bssBANK3     001BC
-_check_alcohol                           text8        017CD
+_check_alcohol                           text8        017D0
 _configDescriptor1                       stringtext4  0102A
 _controlTransferState                    bssBANK1     000ED
 _device_dsc                              stringtext7  01800
@@ -950,7 +950,7 @@ _ep_data_out                             bssBANK2     00160
 _hid_rpt01                               stringtext6  01075
 _idle_rate                               bssBANK3     001BD
 _inPipes                                 bssBANK0     00065
-_init_alcohol                            text4        017C0
+_init_alcohol                            text4        017C3
 _main                                    maintext     00801
 _memcpy                                  text20       009DE
 _memset                                  text26       00386
@@ -964,9 +964,9 @@ _sd000                                   stringtext8  01818
 _sd001                                   stringtext5  01053
 _sd002                                   stringtext3  01000
 _shortPacketStatus                       bssBANK2     00167
-_start_alcohol                           text5        017A7
+_start_alcohol                           text5        017AA
 btemp                                    (abs)        0007E
-check_alcohol@value                      cstackBANK1  000E3
+check_alcohol@value                      cstackBANK1  000E2
 clear_ram0                               clrtext      007F9
 end_of_initialization                    cinit        00029
 i1LED_Off@led                            cstackCOMMON 00072
@@ -980,14 +980,14 @@ i1USBTransferOnePacket@dir               cstackCOMMON 00070
 i1USBTransferOnePacket@ep                cstackCOMMON 00078
 i1USBTransferOnePacket@handle            cstackCOMMON 00079
 i1USBTransferOnePacket@len               cstackCOMMON 00073
-i1_LED_Init                              text35       01785
+i1_LED_Init                              text35       01788
 i1_LED_Off                               text34       008DF
 i1_LED_On                                text36       008B7
 i1_SYSTEM_Initialize                     text31       00959
 i1_USBDeviceInit                         text14       005B2
 i1_USBTransferOnePacket                  text39       00E67
-i1_init_alcohol                          text32       017B3
-i1_start_alcohol                         text33       0179B
+i1_init_alcohol                          text32       017B6
+i1_start_alcohol                         text33       0179E
 int$flags                                (abs)        0007E
 intlevel0                                functab      00000
 intlevel1                                functab      00000
@@ -1021,11 +1021,11 @@ usb_device_hid.c
 usb_device_hid.c estimated size: 159
 
 alcohol_drive.c
-		_init_alcohol  		CODE           	17C0	0000	13
-		_check_alcohol 		CODE           	17CD	0000	23
-		_start_alcohol 		CODE           	17A7	0000	12
+		_init_alcohol  		CODE           	17C3	0000	13
+		_check_alcohol 		CODE           	17D0	0000	20
+		_start_alcohol 		CODE           	17AA	0000	12
 
-alcohol_drive.c estimated size: 48
+alcohol_drive.c estimated size: 45
 
 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\memset.c
 		_memset        		CODE           	0386	0000	202
@@ -1043,24 +1043,24 @@ shared
 		_USB_CD_Ptr    		STRCODE        	181C	0000	2
 		_sd001         		STRCODE        	1053	0000	34
 		_sd002         		STRCODE        	1000	0000	42
-		i1_init_alcohol		CODE           	17B3	0000	13
+		i1_init_alcohol		CODE           	17B6	0000	13
 		i1_USBDeviceInit		CODE           	05B2	0000	169
 		__initialization		CODE           	000D	0000	28
-		i1_LED_Init    		CODE           	1785	0000	11
+		i1_LED_Init    		CODE           	1788	0000	11
 		_device_dsc    		STRCODE        	1800	0000	18
 		i1_LED_On      		CODE           	08B7	0000	40
 		i1_LED_Off     		CODE           	08DF	0000	40
 		i1_SYSTEM_Initialize		CODE           	0959	0000	44
 		_USB_SD_Ptr    		STRCODE        	1812	0000	6
 		_hid_rpt01     		STRCODE        	1075	0000	29
-		i1_start_alcohol		CODE           	179B	0000	12
+		i1_start_alcohol		CODE           	179E	0000	12
 		_sd000         		STRCODE        	1818	0000	4
 		i1_USBTransferOnePacket		CODE           	0E67	0000	135
 
 shared estimated size: 668
 
 leds.c
-		_LED_Init      		CODE           	1790	0000	11
+		_LED_Init      		CODE           	1793	0000	11
 		_LED_Off       		CODE           	0907	0000	41
 		_LED_On        		CODE           	0930	0000	41
 

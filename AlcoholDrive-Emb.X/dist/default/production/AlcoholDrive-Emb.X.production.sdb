@@ -708,9 +708,9 @@ LED_NG 4
 "34 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\alcohol_drive.c
 [v _check_alcohol check_alcohol `(us  1 e 2 0 ]
 {
-"48
-[v check_alcohol@value value `us  1 a 2 3 ]
 "50
+[v check_alcohol@value value `us  1 a 2 2 ]
+"52
 } 0
 "999 C:\Users\georg\Documents\GitHub\AlcoholDrive-Emb\AlcoholDrive-Emb.X\usb_device.c
 [v _USBTransferOnePacket USBTransferOnePacket `(*.39v  1 e 1 0 ]

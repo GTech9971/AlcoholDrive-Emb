@@ -11,12 +11,12 @@
   0h - 3h		(dist/default/production\AlcoholDrive-Emb.X.production.hex)
   8h - FFDh		(dist/default/production\AlcoholDrive-Emb.X.production.hex)
   1002h - 2123h		(dist/default/production\AlcoholDrive-Emb.X.production.hex)
-  2F0Ah - 303Bh		(dist/default/production\AlcoholDrive-Emb.X.production.hex)
+  2F10h - 303Bh		(dist/default/production\AlcoholDrive-Emb.X.production.hex)
   1000Eh - 10011h		(dist/default/production\AlcoholDrive-Emb.X.production.hex)
  Unused ranges:
   4h - 7h
   FFEh - 1001h
-  2124h - 2F09h
+  2124h - 2F0Fh
   303Ch - 1000Dh
 
 ### Hex Memory Map ###
@@ -558,7 +558,6 @@
 00002110 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002120 | H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
-00002F00 | -- -- -- -- -- -- -- -- -- -- H1 H1 H1 H1 H1 H1
 00002F10 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002F20 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002F30 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1

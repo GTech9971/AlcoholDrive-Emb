@@ -11,9 +11,8 @@
 void init_alcohol(){
     TRISAbits.TRISA5 = PIN_INPUT;
     TRISAbits.TRISA4 = PIN_INPUT;
-    ANSELAbits.ANSA4 = PIN_INPUT;
     ADCON0 = 0x00;
-    ADCON1 = 0x80;
+    ADCON1 = 0xE0; // Fosc 64
     
     start_alcohol();
 }
@@ -42,9 +41,11 @@ unsigned short check_alcohol(){
 //        __delay_ms(10);
 //    }
 //    return ret;
-    __delay_ms(5);
-    ADCON0bits.GO = 1;
-    while(ADCON0bits.GO);
-    unsigned short value = ADRESL + ( ADRESH * 256);
+    ADCON0bits.ADON = 1;
+    
+    __delay_us(5);
+    ADCON0bits.GO_nDONE = 1;
+    while(ADCON0bits.GO_nDONE);
+    unsigned short value = (ADRESH << 8) + (ADRESL);
     return value;
 }

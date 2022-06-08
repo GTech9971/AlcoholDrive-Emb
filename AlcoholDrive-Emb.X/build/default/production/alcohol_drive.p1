@@ -57,12 +57,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1703
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1703: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0x09D)));
 [v _ADCON0bits `VS92 ~T0 @X0 0 e@157 ]
-"1638
-[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1638: extern volatile unsigned char ADRESL __attribute__((address(0x09B)));
-[v _ADRESL `Vuc ~T0 @X0 0 e@155 ]
 "1658
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1658: extern volatile unsigned char ADRESH __attribute__((address(0x09C)));
 [v _ADRESH `Vuc ~T0 @X0 0 e@156 ]
+"1638
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 1638: extern volatile unsigned char ADRESL __attribute__((address(0x09B)));
+[v _ADRESL `Vuc ~T0 @X0 0 e@155 ]
 "54 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1459.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -514,8 +514,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;alcohol_drive.c: 15:     ADCON0 = 0x00;
 [e = _ADCON0 -> -> 0 `i `uc ]
 "16
-[; ;alcohol_drive.c: 16:     ADCON1 = 0x80;
-[e = _ADCON1 -> -> 128 `i `uc ]
+[; ;alcohol_drive.c: 16:     ADCON1 = 0b11100000;
+[e = _ADCON1 -> -> 224 `i `uc ]
 "18
 [; ;alcohol_drive.c: 18:     start_alcohol();
 [e ( _start_alcohol ..  ]
@@ -546,27 +546,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _check_alcohol ]
 [f ]
 "45
-[; ;alcohol_drive.c: 45:     _delay((unsigned long)((5)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"46
-[; ;alcohol_drive.c: 46:     ADCON0bits.GO = 1;
-[e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
+[; ;alcohol_drive.c: 45:     ADCON0bits.ADON = 1;
+[e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
 "47
-[; ;alcohol_drive.c: 47:     while(ADCON0bits.GO);
+[; ;alcohol_drive.c: 47:     _delay((unsigned long)((5)*(48000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 48000000 `l `d .4000000.0 `ul ]
+"48
+[; ;alcohol_drive.c: 48:     ADCON0bits.GO_nDONE = 1;
+[e = . . _ADCON0bits 0 1 -> -> 1 `i `uc ]
+"49
+[; ;alcohol_drive.c: 49:     while(ADCON0bits.GO_nDONE);
 [e $U 330  ]
 [e :U 331 ]
 [e :U 330 ]
-[e $ != -> . . _ADCON0bits 2 1 `i -> 0 `i 331  ]
+[e $ != -> . . _ADCON0bits 0 1 `i -> 0 `i 331  ]
 [e :U 332 ]
-"48
-[; ;alcohol_drive.c: 48:     unsigned short value = ADRESL + ( ADRESH * 256);
+"50
+[; ;alcohol_drive.c: 50:     unsigned short value = (ADRESH << 8) + (ADRESL);
 [v _value `us ~T0 @X0 1 a ]
-[e = _value -> + -> _ADRESL `i * -> _ADRESH `i -> 256 `i `us ]
-"49
-[; ;alcohol_drive.c: 49:     return value;
+[e = _value -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `us ]
+"51
+[; ;alcohol_drive.c: 51:     return value;
 [e ) _value ]
 [e $UE 329  ]
-"50
-[; ;alcohol_drive.c: 50: }
+"52
+[; ;alcohol_drive.c: 52: }
 [e :UE 329 ]
 }
