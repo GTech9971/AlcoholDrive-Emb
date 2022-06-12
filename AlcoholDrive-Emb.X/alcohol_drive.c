@@ -47,5 +47,8 @@ unsigned short check_alcohol(){
     ADCON0bits.GO_nDONE = 1;
     while(ADCON0bits.GO_nDONE);
     unsigned short value = (ADRESH << 8) + (ADRESL);
+    
+    __delay_ms(200);
+    
     return value;
 }

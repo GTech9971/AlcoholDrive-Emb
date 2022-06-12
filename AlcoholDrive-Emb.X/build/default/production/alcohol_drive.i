@@ -4112,9 +4112,8 @@ typedef uint32_t uint_fast32_t;
 void init_alcohol(){
     TRISAbits.TRISA5 = 1;
     TRISAbits.TRISA4 = 1;
-    ANSELAbits.ANSA4 = 1;
     ADCON0 = 0x00;
-    ADCON1 = 0b11100000;
+    ADCON1 = 0xE0;
 
     start_alcohol();
 }
@@ -4133,12 +4132,15 @@ void start_alcohol(){
 
 
 unsigned short check_alcohol(){
-# 45 "alcohol_drive.c"
+# 44 "alcohol_drive.c"
     ADCON0bits.ADON = 1;
 
     _delay((unsigned long)((5)*(48000000/4000000.0)));
     ADCON0bits.GO_nDONE = 1;
     while(ADCON0bits.GO_nDONE);
     unsigned short value = (ADRESH << 8) + (ADRESL);
+
+    _delay((unsigned long)((200)*(48000000/4000.0)));
+
     return value;
 }
